@@ -39,7 +39,7 @@
                         <div class="product-details-content">
                             <li>Màu: Đen</li>
                         </div>
-                        <div class=""></div>
+                        <div class="bin"></div>
                     </div>
                 </div>
             </div>
