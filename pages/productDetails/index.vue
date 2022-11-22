@@ -7,7 +7,8 @@
             <div class="row">
                 <div class="col-md-12 col-lg-5 col-xl-5">
                     <div class="img-product">
-                        <img class="img-product-details" src="../../assets/img/250-21734-laptop-gigabyte-gaming-g5-md-51s1123so.jpg" alt="">
+                        <img class="img-product-details"
+                            src="../../assets/img/250-21734-laptop-gigabyte-gaming-g5-md-51s1123so.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-7 col-xl-7">
@@ -39,7 +40,28 @@
                         <div class="product-details-content">
                             <li>Màu: Đen</li>
                         </div>
-                        <div class="bin"></div>
+                        <div class="status">
+                            <div class="status-content">
+                                Tình trạng:
+                            </div>
+                            <div class="YESorNO">
+                                Liên hệ
+                            </div>
+                            <div class="status-content-1">
+                                Bảo hành:
+                            </div>
+                            <div class="time-insurance">
+                                24 Tháng
+                            </div>
+                        </div>
+                        <div class="prize-product-details">
+                            <div class="prize-product-content">
+                                Giá bán:  
+                            </div>
+                            <div class="money-buy-product">
+                                21.000.000đ
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -61,7 +83,7 @@ export default {
     padding: 0 5%;
 }
 
-.header-product{
+.header-product {
     font-size: 23px;
     align-items: center;
     justify-content: center;
@@ -70,26 +92,61 @@ export default {
 
 }
 
-.product-general{
+.product-general {
     font-size: 15px;
     font-weight: bold;
 }
 
-.product-details{
+.product-details {
     width: 100%;
     padding: 0 8%;
 }
-.img-product{
+
+.img-product {
     width: 100%;
     height: 290px;
 }
 
-.img-product-details{
+.img-product-details {
     width: 100%;
     height: 290px;
 }
-.test-2{
+
+.test-2 {
     width: 100%;
     height: 200px;
+}
+
+.status {
+    display: flex;
+    padding-top: 65px;
+}
+
+.YESorNO {
+    margin-left: 4px;
+}
+
+.status-content-1 {
+    margin-left: 25px;
+}
+
+.time-insurance {
+    margin-left: 4px;
+}
+
+.prize-product-details{
+    display: flex;
+    border: 3px solid #0f5b9a;
+}
+
+.prize-product-content{
+    padding-top: 15px;
+    font-size: 15px;
+}
+
+.money-buy-product{
+    padding-left: 30px;
+    font-size: 30px;
+    color: #0f5b9a;
 }
 </style>
