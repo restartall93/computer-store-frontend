@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-7 col-xl-7">
-                    <div class="test-2">
+                    <div class="product-information">
                         <div class="product-general">
                             Thông số sản phẩm
                         </div>
@@ -63,11 +63,13 @@
                             </div>
                         </div>
                         <div class:="repost-product">
-                            <div class="offer-tiltle">
-                                <div class="icon-repost-product">
+                            <div class="icon-repost-product">
+                                <div class="icon-repost-product-content">
                                     <font-awesome-icon icon="fa-solid fa-gift" />
                                     Khuyến mại
                                 </div>
+                            </div>
+                            <div class="offer-tiltle">
                                 <div class="repost-product-details">
                                     + Túi/Balo laptop trị giá : 390.000đ
                                 </div>
@@ -91,6 +93,25 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="btn-buy">
+                            ĐẶT MUA NGAY
+                            <br>
+                            Giao hàng tận nơi nhanh chóng
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-detail-read">
+            <div class="row">
+                <div class="col-md-12 col-lg-7 col-xl-7">
+                    <div class="test-1">
+                        gregiurheg
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-5 col-xl-5">
+                    <div class="test-2">
+                        frewgfreg
                     </div>
                 </div>
             </div>
@@ -133,6 +154,7 @@ export default {
 
 .product-details-content {
     font-size: 15px;
+    margin-left: 10px;
 }
 
 .img-product {
@@ -145,7 +167,7 @@ export default {
     height: 290px;
 }
 
-.test-2 {
+.product-information {
     width: 100%;
     height: 700px;
     background-color: yellow;
@@ -170,8 +192,9 @@ export default {
 
 .prize-product-details {
     display: flex;
-    border: 3px dotted #0f5b9a;
-    width: 90%;
+    border: 1px dashed #4267b2;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .prize-product-content {
@@ -188,18 +211,56 @@ export default {
 .repost-product {
     width: 100%;
     height: 205px;
-    border: 5px;
+
 }
 
 .offer-tiltle {
-    border: 5px solid red;
+    border: 1px solid red;
+    border-radius: 15px;
+    padding-left: 20px;
+
 }
+
 
 .icon-repost-product {
-    padding: 10px 0 0 30px;
-    width: 30%;
+    width: 35%;
     height: 40px;
+    margin-left: 20px;
+    display: flex;
+    margin-top: 20px;
+    background-color: #ed1b24;
+    color: #fffafa;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
 }
 
-.repost-product-details {}
+.icon-repost-product-content {
+    font-size: 18px;
+    color: #fffafa;
+
+}
+
+.btn-buy {
+    margin-top: 20px;
+    width: 100%;
+    height: 80px;
+    background-color: #ed1b24;
+    text-align: center;
+    padding-top: 15px;
+    color: #fffafa;
+    font-weight: bold;
+}
+
+.product-detail-read{
+    width: 100%;
+    height: 700px;
+}
+.test-1 {
+    background-color: red;
+}
+
+.test-2 {
+    background-color: black;
+}
 </style>
