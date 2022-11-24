@@ -56,10 +56,39 @@
                         </div>
                         <div class="prize-product-details">
                             <div class="prize-product-content">
-                                Giá bán:  
+                                Giá bán:
                             </div>
                             <div class="money-buy-product">
                                 21.000.000đ
+                            </div>
+                        </div>
+                        <div class:="repost-product">
+                            <div class="offer-tiltle">
+                                <div class="icon-repost-product">
+                                    <font-awesome-icon icon="fa-solid fa-gift" />
+                                    Khuyến mại
+                                </div>
+                                <div class="repost-product-details">
+                                    + Túi/Balo laptop trị giá : 390.000đ
+                                </div>
+                                <div class="repost-product-details">
+                                    + Chuột không dây trị giá: 150.000đ
+                                </div>
+                                <div class="repost-product-details">
+                                    + Bàn di chuột trị giá: 50.000đ
+                                </div>
+                                <div class="repost-product-details">
+                                    + Bộ vệ sinh Laptop trị giá: 40.000đ
+                                </div>
+                                <div class="repost-product-details">
+                                    + Vệ sinh bảo dưỡng Laptop miễn phí trọn đời trị giá: 1 triệu đồng
+                                </div>
+                                <div class="repost-product-details">
+                                    + Giảm 10% khi mua thêm RAM, HDD laptop
+                                </div>
+                                <div class="repost-product-details">
+                                    + Giảm 5% khi mua kèm Gear, Đế tản nhiệt Laptop
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -93,13 +122,17 @@ export default {
 }
 
 .product-general {
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .product-details {
     width: 100%;
     padding: 0 8%;
+}
+
+.product-details-content {
+    font-size: 15px;
 }
 
 .img-product {
@@ -114,7 +147,8 @@ export default {
 
 .test-2 {
     width: 100%;
-    height: 200px;
+    height: 700px;
+    background-color: yellow;
 }
 
 .status {
@@ -134,19 +168,38 @@ export default {
     margin-left: 4px;
 }
 
-.prize-product-details{
+.prize-product-details {
     display: flex;
-    border: 3px solid #0f5b9a;
+    border: 3px dotted #0f5b9a;
+    width: 90%;
 }
 
-.prize-product-content{
+.prize-product-content {
     padding-top: 15px;
     font-size: 15px;
 }
 
-.money-buy-product{
+.money-buy-product {
     padding-left: 30px;
     font-size: 30px;
     color: #0f5b9a;
 }
+
+.repost-product {
+    width: 100%;
+    height: 205px;
+    border: 5px;
+}
+
+.offer-tiltle {
+    border: 5px solid red;
+}
+
+.icon-repost-product {
+    padding: 10px 0 0 30px;
+    width: 30%;
+    height: 40px;
+}
+
+.repost-product-details {}
 </style>
