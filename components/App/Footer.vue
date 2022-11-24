@@ -485,7 +485,7 @@ export default {
     align-items: center; 
 }
 
-.{
+.icon-box-social-ft{
     width: 41px;
     height: 100%;
     font-size: 40px;

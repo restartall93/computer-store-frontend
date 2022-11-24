@@ -106,13 +106,27 @@
             <div class="row">
                 <div class="col-md-12 col-lg-7 col-xl-7">
                     <div class="test-1">
-                        gregiurheg
+                        <div class="title-detail-des">
+                            Đặc Điểm VIDEO BÌNH LUẬN
+                        </div>
+                        <div class="title">
+                            Giới thiệu Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/
+                            RTX3050Ti 4Gb/ Win11)
+                        </div>
+                        <div class="des-content">
+                            <p>Sức mạnh vượt bậc, chiến game cực đã</p>
+                            <p>Laptop được trang bị con chip Intel Core i thế hệ 11 trên công nghệ Turbo Boost cho hiệu suất tăng 20% so với các thế hệ trước, không chỉ chơi game tốt mà nó còn đem đến sức mạnh vượt trội xử lý nhanh gọn các phần mềm văn phòng trên Word, Excel, PowerPoint,... hay thiết kế poster, chỉnh sửa hình ảnh, render video,... mượt mà.</p>
+                            <p>RAM DDR4 2 khe có tốc độ Bus RAM 3200 MHz cho khả năng đa nhiệm vượt trội, bạn có thể mở cùng lúc nhiều ứng dụng nền việc vừa chơi game vừa phát sóng trực tiếp vẫn không có vấn đề gì. Hay vừa thiết kế banner trên Photoshop vừa bật YouTube nghe nhạc. Ngoài ra, bạn có thể nâng cấp tối đa lên đến 64 GB đáp ứng tối đa mọi nhu cầu của bạn.</p>
+                            <p>Card đồ họa rời NVIDIA GeForce RTX 3000 cải thiện khả năng hiển thị hình ảnh khi chơi game, làm đồ họa. Bạn có thể chơi các tựa game phổ biến hiện nay như: GTA V, LOL, CS:GO, Cyberpunk 2077,... hay thỏa sức sáng tại trên các phần mềm như: Photoshop, AI, Lightroom, Pr, Figma,...</p>
+                            <p>Sử dụng ổ cứng SSD NVMe PCIe cho thời gian phản hồi nhanh chóng, nếu bạn thấy ổ đi kèm không đủ dùng thì bạn có thể thay thanh SSD có sẵn ra và lắp thanh khác vào với dung lượng tối đa là 1 TB.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-5 col-xl-5">
                     <div class="test-2">
                         frewgfreg
                     </div>
+
                 </div>
             </div>
         </div>
@@ -252,10 +266,11 @@ export default {
     font-weight: bold;
 }
 
-.product-detail-read{
+.product-detail-read {
     width: 100%;
     height: 700px;
 }
+
 .test-1 {
     background-color: red;
 }
