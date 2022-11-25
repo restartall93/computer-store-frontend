@@ -130,6 +130,54 @@
                             <p>Sử dụng ổ cứng SSD NVMe PCIe cho thời gian phản hồi nhanh chóng, nếu bạn thấy ổ đi kèm
                                 không đủ dùng thì bạn có thể thay thanh SSD có sẵn ra và lắp thanh khác vào với dung
                                 lượng tối đa là 1 TB.</p>
+                            <p> <img class="img-read" src="../../assets/img/61677_laptop_gigabyte_gaming_g5_5.png"
+                                    alt=""></p>
+                            <p>Không dừng lại ở đây, máy còn được trang bị thêm khe cắm SSD M.2 PCIe mở rộng (nâng cấp
+                                tối đa 1 TB) và khe cắm HDD SATA (nâng cấp tối đa 2 TB) để bạn dễ dàng mở rộng không
+                                gian lưu trữ, bạn có thể thả ga lưu trữ mà không lo máy bị hết dung lượng.</p>
+                            <p>Laptop GIGABYTE được trang bị hệ thống tản nhiệt hiện đại với 2 quạt có 71 cánh giúp
+                                không khí được lưu thông nhanh chóng, đảm bảo máy tính không bị nóng khi hoạt động ở
+                                công suất cao. Duy trì sự mượt mà khi chơi game hay làm đồ họa hàng giờ liền.</p>
+                            <p>Có một điểm khá đặc biệt ở GIGABYTE Gaming G5 chính là pin rời. Hiện tại rất ít hãng nào
+                                dùng pin rời cho laptop của mình, bạn có thể dự trữ nhiều thanh pin để thay thế khi hết
+                                một cách dễ dàng mà không cần dậy sạc rườm rà. Tuy nhiên, pin rời sẽ chiếm đi vị trí khe
+                                thoát nhiệt phía sau của máy và giảm bớt đi phần nào khả năng thoát nhiệt khi máy vận
+                                hành những tác vụ nặng.</p>
+                            <p>Vẻ ngoài tối giản nhưng vẫn đậm chất riêng</p>
+                            <p>Lớp vỏ của chiếc laptop GIGABYTE này được làm từ nhựa để thoát nhiệt tốt hơn và sở hữu
+                                gam màu đen cực mạnh mẽ, logo kim loại sáng bóng nằm giữa mặt lưng thu hút từ ánh nhìn
+                                đầu tiên. Máy có trọng lượng 2.2 kg và có độ dày 24.9 mm đáp ứng khá tốt nhu cầu di
+                                chuyển của người dùng cùng với một chiếc laptop gaming.</p>
+                            <p>Bàn phím laptop được thiết kế rộng rãi, hạn chế tối đa tình trạng nhấn nhầm khi chơi
+                                game, làm việc. Được tích hợp thêm dải đèn LED phía dưới các phím tạo sự nổi bật, giúp
+                                bạn xác định vị trí các phím nhanh chóng khi chơi game hay đang sử dụng trong môi trường
+                                thiếu sáng.</p>
+                            <p><img class="img-read" src="../../assets/img/61677_laptop_gigabyte_gaming_g5_3.png"
+                                    alt=""></p>
+                            <p>Bên phải của bàn phím được trang bị các phím số hỗ trợ tốt nhất cho công việc của bạn,
+                                khi bạn gõ thì tiếng phát ra không quá lớn sẽ tránh làm ảnh hưởng đến người xung quanh
+                                mà bạn cũng tập trung hơn.</p>
+                            <p>Kết nối dễ dàng với các thiết bị khác nhờ các cổng được trang bị xung quanh laptop như:
+                                USB 3.2, HDMI, Jack tai nghe 3.5 mm, LAN (RJ45), Mini DisplayPort, USB 2.0, Type-C.</p>
+                            <p>Chuẩn kết nối không dây Bluetooth 5.2 và Wi-Fi 6 (802.11ax) cho kết nối ổn định, liên kết
+                                và truyền xuất đến các thiết bị khác nhanh chóng không cần dùng dây cáp, tốc độ truy cập
+                                mạng nhanh chóng.</p>
+                            <p>Trải nghiệm chân thật với màn hình sắc nét</p>
+                            <p>Laptop được trang bị màn hình 15.6 inch độ phân giải Full HD (1920 x 1080) thể hiện hình
+                                ảnh sắc nét từng chi tiết, cho bạn thưởng thức trọn vẹn trò chơi và bộ phim yêu thích.
+                            </p>
+                            <p>Cùng với đó là tấm nền IPS cho góc nhìn 178 độ không gian hiển thị thêm phần mở rộng,
+                                hình ảnh không bị biến đổi khi bạn nhìn từ góc nghiêng tạo cảm giác thoải mái. Lớp chống
+                                chói Anti Glare đem đến những hình ảnh sắc nét với màu sắc chính xác dù bạn sử dụng ở
+                                nơi có cường độ sáng cao như ngoài trời mà không lo mắt bị mỏi hay lóa.</p>
+                            <p><img class="img-read" src="../../assets/img/61677_laptop_gigabyte_gaming_g5_2.png" alt=""></p>
+                            <p>Không dùng lại ở đó, laptop sở hữu tần số quét màn hình 144 Hz có khả năng tái tạo khung
+                                hình cực nhanh, hạn chế tối đa tình trạng giật lag, lưu bóng hay xé hình khi nhân vật có
+                                các chuyển động nhanh. Giúp bạn phản ứng nhanh chóng khi chơi game hay chỉnh sửa video.
+                            </p>
+                            <p>Tận hưởng không gian âm nhạc thật thư giãn với công nghệ âm thanh DTS:X Ultra có khả năng
+                                tái tạo âm thanh 3D sống động bạn có thể nghe rõ cả tiếng gió khi chơi game, những âm
+                                bass được phát ra cực đã.</p>
                         </div>
                     </div>
                 </div>
@@ -205,7 +253,7 @@
                             </div>
                             <div class="content-spec">
                                 <div class="device-product-content">
-                                    Dung lượng tối đa	
+                                    Dung lượng tối đa
                                 </div>
                                 <div class="device-product-content-details">
                                     64GB
@@ -224,24 +272,22 @@
                                     Ổ cứng
                                 </div>
                                 <div class="device-product-content-details">
-                                    512GB SSD 
+                                    512GB SSD
                                 </div>
                             </div>
                             <div class="content-spec">
                                 <div class="device-product-content">
-                                    Màn hình    
+                                    Màn hình
                                 </div>
                                 <div class="device-product-content-details">
                                     15.6 inch FHD 1920x1080 IPS, Anti-glare LCD (144Hz, 72% NTSC), 100% srgb
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </template>
 
@@ -255,7 +301,7 @@ export default {
 <style>
 .header-product-details-container {
     width: 100%;
-    height: 2000px;
+    height: 4500px;
     padding: 0 5%;
 }
 
@@ -295,7 +341,7 @@ export default {
 
 .product-information {
     width: 100%;
-    height: 700px;
+    height: 720x;
     background-color: yellow;
 }
 
@@ -384,9 +430,13 @@ export default {
     padding: 0 8%;
 }
 
+.img-read {
+    width: 100%;
+}
+
 .test-1 {
     background-color: red;
-    height: 700px;
+    height: 3750px;
     width: 100%;
 
 }
@@ -396,7 +446,7 @@ export default {
     width: 100%;
 }
 
-.title-box{
+.title-box {
     font-size: 20px;
     font-weight: bold;
 }
@@ -407,13 +457,15 @@ export default {
 
 .device-product-content {
     border: 1px solid black;
-    width: 35%;
+    width: 31%;
     padding: 3%;
+    font-size: 15px;
 }
 
-.device-product-content-details{
+.device-product-content-details {
     width: 65%;
     border: 1px solid black;
     padding: 3%;
+    font-size: 15px;
 }
 </style>
