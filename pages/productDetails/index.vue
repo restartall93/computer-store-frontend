@@ -124,9 +124,21 @@
                 </div>
                 <div class="col-md-12 col-lg-5 col-xl-5">
                     <div class="test-2">
-                        frewgfreg
+                        <div class="box-spec">
+                            <div class="title-box">
+                                Thông số kỹ thuật
+                            </div>
+                            <div class="content-spec">
+                                <table style="width: 100%">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 29%;" width = "157">Hãng sản xuất</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -269,13 +281,18 @@ export default {
 .product-detail-read {
     width: 100%;
     height: 700px;
+    padding: 0 8%;
 }
 
 .test-1 {
     background-color: red;
+    height: 700px;
+    width: 100%;
+
 }
 
 .test-2 {
-    background-color: black;
+    background-color: aqua;
+    width: 100%;
 }
 </style>
