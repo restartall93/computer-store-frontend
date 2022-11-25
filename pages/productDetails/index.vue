@@ -115,10 +115,21 @@
                         </div>
                         <div class="des-content">
                             <p>Sức mạnh vượt bậc, chiến game cực đã</p>
-                            <p>Laptop được trang bị con chip Intel Core i thế hệ 11 trên công nghệ Turbo Boost cho hiệu suất tăng 20% so với các thế hệ trước, không chỉ chơi game tốt mà nó còn đem đến sức mạnh vượt trội xử lý nhanh gọn các phần mềm văn phòng trên Word, Excel, PowerPoint,... hay thiết kế poster, chỉnh sửa hình ảnh, render video,... mượt mà.</p>
-                            <p>RAM DDR4 2 khe có tốc độ Bus RAM 3200 MHz cho khả năng đa nhiệm vượt trội, bạn có thể mở cùng lúc nhiều ứng dụng nền việc vừa chơi game vừa phát sóng trực tiếp vẫn không có vấn đề gì. Hay vừa thiết kế banner trên Photoshop vừa bật YouTube nghe nhạc. Ngoài ra, bạn có thể nâng cấp tối đa lên đến 64 GB đáp ứng tối đa mọi nhu cầu của bạn.</p>
-                            <p>Card đồ họa rời NVIDIA GeForce RTX 3000 cải thiện khả năng hiển thị hình ảnh khi chơi game, làm đồ họa. Bạn có thể chơi các tựa game phổ biến hiện nay như: GTA V, LOL, CS:GO, Cyberpunk 2077,... hay thỏa sức sáng tại trên các phần mềm như: Photoshop, AI, Lightroom, Pr, Figma,...</p>
-                            <p>Sử dụng ổ cứng SSD NVMe PCIe cho thời gian phản hồi nhanh chóng, nếu bạn thấy ổ đi kèm không đủ dùng thì bạn có thể thay thanh SSD có sẵn ra và lắp thanh khác vào với dung lượng tối đa là 1 TB.</p>
+                            <p>Laptop được trang bị con chip Intel Core i thế hệ 11 trên công nghệ Turbo Boost cho hiệu
+                                suất tăng 20% so với các thế hệ trước, không chỉ chơi game tốt mà nó còn đem đến sức
+                                mạnh vượt trội xử lý nhanh gọn các phần mềm văn phòng trên Word, Excel, PowerPoint,...
+                                hay thiết kế poster, chỉnh sửa hình ảnh, render video,... mượt mà.</p>
+                            <p>RAM DDR4 2 khe có tốc độ Bus RAM 3200 MHz cho khả năng đa nhiệm vượt trội, bạn có thể mở
+                                cùng lúc nhiều ứng dụng nền việc vừa chơi game vừa phát sóng trực tiếp vẫn không có vấn
+                                đề gì. Hay vừa thiết kế banner trên Photoshop vừa bật YouTube nghe nhạc. Ngoài ra, bạn
+                                có thể nâng cấp tối đa lên đến 64 GB đáp ứng tối đa mọi nhu cầu của bạn.</p>
+                            <p>Card đồ họa rời NVIDIA GeForce RTX 3000 cải thiện khả năng hiển thị hình ảnh khi chơi
+                                game, làm đồ họa. Bạn có thể chơi các tựa game phổ biến hiện nay như: GTA V, LOL, CS:GO,
+                                Cyberpunk 2077,... hay thỏa sức sáng tại trên các phần mềm như: Photoshop, AI,
+                                Lightroom, Pr, Figma,...</p>
+                            <p>Sử dụng ổ cứng SSD NVMe PCIe cho thời gian phản hồi nhanh chóng, nếu bạn thấy ổ đi kèm
+                                không đủ dùng thì bạn có thể thay thanh SSD có sẵn ra và lắp thanh khác vào với dung
+                                lượng tối đa là 1 TB.</p>
                         </div>
                     </div>
                 </div>
@@ -126,22 +137,111 @@
                     <div class="test-2">
                         <div class="box-spec">
                             <div class="title-box">
-                                Thông số kỹ thuật
+                                THÔNG SỐ KỸ THUẬT
                             </div>
                             <div class="content-spec">
-                                <table style="width: 100%">
-                                    <tbody>
-                                        <tr>
-                                            <td style="width: 29%;" width = "157">Hãng sản xuất</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="device-product-content">
+                                    Hãng sản xuất
+                                </div>
+                                <div class="device-product-content-details">
+                                    Gigabyte
+                                </div>
                             </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    Chủng loại
+                                </div>
+                                <div class="device-product-content-details">
+                                    G5
+                                </div>
+                            </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    Part Number
+                                </div>
+                                <div class="device-product-content-details">
+                                    MD-5 51S1123SO
+                                </div>
+                            </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    Màu sắc
+                                </div>
+                                <div class="device-product-content-details">
+                                    Đen
+                                </div>
+                            </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    CPU
+                                </div>
+                                <div class="device-product-content-details">
+                                    Intel i5 11400H (2.7Ghz, upto 4.5Ghz)
+                                </div>
+                            </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    Chipset
+                                </div>
+                                <div class="device-product-content-details">
+                                    Intel HM570
+                                </div>
+                            </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    RAM
+                                </div>
+                                <div class="device-product-content-details">
+                                    16GB DDR4 3200Mhz (8GB * 2)
+                                </div>
+                            </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    Số khe cắm
+                                </div>
+                                <div class="device-product-content-details">
+                                    2
+                                </div>
+                            </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    Dung lượng tối đa	
+                                </div>
+                                <div class="device-product-content-details">
+                                    64GB
+                                </div>
+                            </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    VGA
+                                </div>
+                                <div class="device-product-content-details">
+                                    NVIDIA GeForce RTX 3050Ti 4GB GDDR6
+                                </div>
+                            </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    Ổ cứng
+                                </div>
+                                <div class="device-product-content-details">
+                                    512GB SSD 
+                                </div>
+                            </div>
+                            <div class="content-spec">
+                                <div class="device-product-content">
+                                    Màn hình    
+                                </div>
+                                <div class="device-product-content-details">
+                                    15.6 inch FHD 1920x1080 IPS, Anti-glare LCD (144Hz, 72% NTSC), 100% srgb
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </template>
 
@@ -294,5 +394,26 @@ export default {
 .test-2 {
     background-color: aqua;
     width: 100%;
+}
+
+.title-box{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content-spec {
+    display: flex;
+}
+
+.device-product-content {
+    border: 1px solid black;
+    width: 35%;
+    padding: 3%;
+}
+
+.device-product-content-details{
+    width: 65%;
+    border: 1px solid black;
+    padding: 3%;
 }
 </style>
