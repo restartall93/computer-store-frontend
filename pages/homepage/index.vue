@@ -38,41 +38,23 @@
                 laptop - phụ kiện
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in laptopList">
                     <div class="card-item">
                         <NuxtLink class="txt-details" :to="{name: 'productDetails'}">
-                            <img class="img-1"
-                                src="../../assets/img/250-21734-laptop-gigabyte-gaming-g5-md-51s1123so.jpg" alt="">
+                            <img class="img-1" v-bind:src="product.img" alt="">
                             <div class="img-content">
-                                Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/
-                                RTX3050Ti
-                                4Gb/ Win11)
+                                {{product.content}}
                             </div>
                         </NuxtLink>
                         <div class="status-product">
                             Liên hệ
                         </div>
                         <div class="prize-product">
-                            21.999.000Đ
+                            {{product.price}}
                             <div class="icon-cast-product">
                                 <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                             </div>
                         </div>
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
 
                     </div>
                 </div>
@@ -238,7 +220,39 @@ import Menu from '../../components/App/Menu.vue'
 export default {
     components: { Menu },
     beforeMount() {
+
+    },
+
+    data(){
+        return{
+            laptopList: [{
+                id: 1,
+                name: '',
+                img: 'https://localhost:7029/product/test.jpg',
+                content: 'Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/RTX3050Ti 4Gb/ Win11)',
+                price: 21000000,
+                status: true
+            },
+            {
+                id: 1,
+                name: '',
+                img: 'https://localhost:7029/product/test.jpg',
+                content: 'Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/RTX3050Ti 4Gb/ Win11)',
+                price: 21000000,
+                status: true
+            },
+            {
+                id: 1,
+                name: '',
+                img: 'https://localhost:7029/product/test.jpg',
+                content: 'Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/RTX3050Ti 4Gb/ Win11)',
+                price: 21000000,
+                status: true
+            }
+        ]
+        }
     }
+
 
 };
 </script>
