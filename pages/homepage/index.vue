@@ -40,17 +40,17 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in laptopList">
                     <div class="card-item">
-                        <NuxtLink class="txt-details" :to="{name: 'productDetails'}">
-                            <img class="img-1" v-bind:src="product.img" alt="">
+                        <NuxtLink class="txt-details" :to="{ name: 'productDetails' }">
+                            <img class="img-1" v-bind:src="'https://localhost:7029'+product.image" alt="">
                             <div class="img-content">
-                                {{product.content}}
+                                {{ product.name }}
                             </div>
                         </NuxtLink>
                         <div class="status-product">
                             Liên hệ
                         </div>
                         <div class="prize-product">
-                            {{product.price}}
+                            {{ product.price }}
                             <div class="icon-cast-product">
                                 <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                             </div>
@@ -219,37 +219,18 @@
 import Menu from '../../components/App/Menu.vue'
 export default {
     components: { Menu },
-    beforeMount() {
-
+    async beforeMount() {
+        var response = await fetch('https://localhost:7029/api/Product/GetProducts')
+            .then(res => 
+                { 
+                    return res.json()
+                })
+        this.laptopList = response
     },
 
-    data(){
-        return{
-            laptopList: [{
-                id: 1,
-                name: '',
-                img: 'https://localhost:7029/product/test.jpg',
-                content: 'Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/RTX3050Ti 4Gb/ Win11)',
-                price: 21000000,
-                status: true
-            },
-            {
-                id: 1,
-                name: '',
-                img: 'https://localhost:7029/product/test.jpg',
-                content: 'Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/RTX3050Ti 4Gb/ Win11)',
-                price: 21000000,
-                status: true
-            },
-            {
-                id: 1,
-                name: '',
-                img: 'https://localhost:7029/product/test.jpg',
-                content: 'Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/RTX3050Ti 4Gb/ Win11)',
-                price: 21000000,
-                status: true
-            }
-        ]
+    data() {
+        return {
+            laptopList: []
         }
     }
 
