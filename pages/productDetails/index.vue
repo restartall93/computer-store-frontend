@@ -1,14 +1,14 @@
 <template>
     <div class="header-product-details-container">
         <div class="header-product">
-            Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/ RTX3050Ti 4Gb/ Win11)
+            {{product.name}}
         </div>
         <div class="product-details">
             <div class="row">
                 <div class="col-md-12 col-lg-5 col-xl-5">
                     <div class="img-product">
                         <img class="img-product-details"
-                            src="../../assets/img/250-21734-laptop-gigabyte-gaming-g5-md-51s1123so.jpg" alt="">
+                        v-bind:src="'https://localhost:7029'+product.image" alt="">
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-7 col-xl-7">
@@ -17,7 +17,7 @@
                             Thông số sản phẩm
                         </div>
                         <div class="product-details-content">
-                            <li>CPU: Intel Core i5 11400H</li>
+                            <li>CPU: {{product.cpu}}</li>
                         </div>
                         <div class="product-details-content">
                             <li>RAM: 16GB</li>
@@ -293,7 +293,31 @@
 
 <script>
 export default {
+    async beforeMount() {
+        this.productId = this.$route.query.productId
+        this.init()
+    },
+    data() {
+        return {
+            product: {},
+            productId: 0,
+        }
+    },
 
+    methods: {
+        async init(){
+            var response = await fetch('https://localhost:7029/api/Product/GetDetail?id='+ this.productId)
+                .then((res) => res.json())
+            this.product = response
+        }
+    },
+
+    watch: {
+        $route(to, from){
+            this.init()
+            window.scrollTo(0, 0)
+        }
+    }
 }
 
 </script>

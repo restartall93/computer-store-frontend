@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in laptopList">
                     <div class="card-item">
-                        <NuxtLink class="txt-details" :to="{ name: 'productDetails' }">
+                        <NuxtLink class="txt-details" :to="{ name: 'productDetails', query: {'productId': product.id} }">
                             <img class="img-1" v-bind:src="'https://localhost:7029'+product.image" alt="">
                             <div class="img-content">
                                 {{ product.name }}
