@@ -28,7 +28,7 @@
                     <div class="authen-icon">
                         <font-awesome-icon icon="fa-solid fa-user" />
                     </div>
-                    <div>Đăng Nhập</div>/
+                    <NuxtLink :to="{ name: 'userLoginPage'}">Đăng Nhập</NuxtLink>/
                     <div>Đăng ký</div>
                 </div>
             </div>

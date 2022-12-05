@@ -20,16 +20,16 @@
                             <li>CPU: {{product.cpu}}</li>
                         </div>
                         <div class="product-details-content">
-                            <li>RAM: 16GB</li>
+                            <li>RAM: {{product.ram}}</li>
                         </div>
                         <div class="product-details-content">
-                            <li>Ổ cứng: 512GB SSD</li>
+                            <li>Ổ cứng: {{product.drive}}</li>
                         </div>
                         <div class="product-details-content">
-                            <li>VGA: NVIDIA RTX3050Ti 4G</li>
+                            <li>VGA: {{product.vga}}</li>
                         </div>
                         <div class="product-details-content">
-                            <li>Màn hình: 15.6 inch FHD 144Hz</li>
+                            <li>Màn hình: {{product.monitor}}</li>
                         </div>
                         <div class="product-details-content">
                             <li>Bàn phím: có đèn led</li>
