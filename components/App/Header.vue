@@ -28,8 +28,8 @@
                     <div class="authen-icon">
                         <font-awesome-icon icon="fa-solid fa-user" />
                     </div>
-                    <NuxtLink :to="{ name: 'userLoginPage'}">Đăng Nhập</NuxtLink>/
-                    <div>Đăng ký</div>
+                    <NuxtLink class="btn-dang-nhap" :to="{ name: 'userLoginPage'}">Đăng Nhập</NuxtLink>/
+                    <NuxtLink class="btn-dang-nhap" :to="{ name: 'userRegisterPage'}">Đăng Ký</NuxtLink>
                 </div>
             </div>
         </div>
@@ -148,6 +148,16 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn-dang-nhap{
+    color: white;
+}
+
+.btn-dang-nhap:hover{
+    color: #CCC;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 #homepage-header {
