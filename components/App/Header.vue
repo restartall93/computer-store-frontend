@@ -64,9 +64,7 @@
                             <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                             <div class="num-cart">23</div>
                         </div>
-                        <div class="cart-content">
-                            Giỏ hàng
-                        </div>
+                        <NuxtLink class="btn-cart-content" :to="{ name: 'cartPage' }">Giỏ hàng</NuxtLink>
                     </div>
                 </div>
             </div>
@@ -234,7 +232,7 @@ export default {
     color: #0f5b9a;
 }
 
-.cart-content {
+.btn-cart-content {
     width: 100%;
     height: 30px;
     margin-top: 4px;
@@ -243,6 +241,14 @@ export default {
     align-items: center; */
     text-align: center;
     font-weight: bold;
+    color: black;
+}
+
+.btn-cart-content :hover{
+    background-color: black;
+    cursor: pointer;
+    text-decoration: none;
+    
 }
 
 .num-cart {

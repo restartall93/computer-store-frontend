@@ -9,16 +9,16 @@
                         </div>
                         <div class="control-item">
                             <div class="label-control">
-                                UserName:
+                                Email đăng nhập:
                             </div>
-                            <input type="text" class="form-control" placeholder="Username" v-model="userName"
+                            <input type="text" class="form-control" placeholder="Email" v-model="userName"
                                 required />
                         </div>
                         <div class="control-item">
                             <div class="label-control">
-                                Password:
+                                Mật khẩu:
                             </div>
-                            <input type="password" class="form-control" placeholder="Password" v-model="passWord"
+                            <input type="password" class="form-control" placeholder="Mật khẩu" v-model="passWord"
                                 required />
                         </div>
                         <div class="btn-login-container control-item">
@@ -45,7 +45,7 @@
 </template>
 <script>
 export default {
-    beforeMount() {
+    befroeMount() {
 
     },
     data() {
@@ -140,5 +140,8 @@ export default {
 .btn-login-container {
     justify-content: center;
     margin-top: 15px;
+}
+.btn-login{
+    background-color: #007bff;
 }
 </style>
