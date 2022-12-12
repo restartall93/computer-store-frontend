@@ -45,7 +45,7 @@
 </template>
 <script>
 export default {
-    befroeMount() {
+    beforeMount() {
 
     },
     data() {
@@ -71,8 +71,10 @@ export default {
                     body: JSON.stringify(userLoginRequest)
                 }
             ).then((res) => res.json())
-            if (repsonseLogin.repsonseLogin == true) {
-                alert(repsonseLogin.description)
+            if (repsonseLogin.resultLogin == true) {
+                alert(repsonseLogin.userInfor)
+                localStorage.setItem('user', JSON.stringify(repsonseLogin.userInfor))
+                this.$router.push("/homepage")
             }
             else{
                 alert(repsonseLogin.description)
