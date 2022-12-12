@@ -6,22 +6,38 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">SP</th>
-                    <th scope="col">Gia</th>
-                    <th scope="col">SL</th>
-                    <th scope="col">Money</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">
+                        <div class="info-cart">
+                            Sản phẩm
+                        </div>
+                    </th>
+                    <th scope="col">
+                        <div class="info-cart-general">
+                            Đơn giá
+                        </div>
+                    </th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Số tiền</th>
+                    <th scope="col">Thao tác</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="(cartDetail, index) in cartDetailList">
                     <td>
-                        <div>{{ cartDetail.name }}</div>
+                        <div class="cart-detail-name">{{ cartDetail.name }}</div>
                     </td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
+                    <td>
+                        <div class="cart-detail-general">{{ cartDetail.price }}</div>
+                    </td>
+                    <td>
+                        <div class="cart-detail-general">{{ cartDetail.quantity }}</div>
+                    </td>
+                    <td>
+                        <div class="cart-detail-general">{{ cartDetail.quantity }}</div>
+                    </td>
+                    <td>
+                        <div class="cart-detail-general">{{ cartDetail.price }}</div>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -68,11 +84,15 @@ export default {
     background-color: yellow;
 }
 
-.test-4 {
-    background-color: aqua;
+.cart-detail-name {
+    width: 60%;
 }
 
-.test-5 {
-    background-color: black;
+.info-cart{
+    width: 60%;
+}
+
+.cart-detail-general {
+    width: 10%;
 }
 </style>
