@@ -11,6 +11,7 @@
                             Sản phẩm
                         </div>
                     </th>
+                    <th scope="col"></th>
                     <th scope="col">
                         <div class="info-cart-general">
                             Đơn giá
@@ -25,6 +26,9 @@
                 <tr v-for="(cartDetail, index) in cartDetailList">
                     <td>
                         <div class="cart-detail-name">{{ cartDetail.name }}</div>
+                    </td>
+                    <td>
+                        <img class="img-cart-detail" v-bind:src="'https://localhost:7029'+cartDetail.image" alt="">
                     </td>
                     <td>
                         <div class="cart-detail-general">{{ cartDetail.price }}</div>
@@ -76,7 +80,6 @@ export default {
 .cart-container-details {
     width: 100%;
     height: 500px;
-    background-color: red;
     padding: 0 8%;
 }
 
@@ -85,14 +88,19 @@ export default {
 }
 
 .cart-detail-name {
-    width: 60%;
+    width: 400px;
+    height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.info-cart{
-    width: 60%;
-}
+.info-cart {}
 
 .cart-detail-general {
     width: 10%;
+}
+
+.img-cart-detail{
+    height: 70px;
 }
 </style>

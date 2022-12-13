@@ -16,6 +16,8 @@ export default {
     Footer,
     Menu
   },
+  async beforeMount() {
+  },
   data() {
     return {
     };

@@ -65,7 +65,7 @@ export default {
 
     methods: {
         async userRegister() {
-            if(this.email != this.confirmPassword){
+            if(this.password != this.confirmPassword){
                 alert("k giong")
                 return
             }
@@ -85,8 +85,10 @@ export default {
                     body: JSON.stringify(userRegisterRequest)
                 }
             ).then((res) => res.json())
-            if (repsonseRegister.repsonseRegister == true) {
+            if (repsonseRegister.resultRegister == true) {
                 alert(repsonseRegister.description)
+                localStorage.setItem('user', JSON.stringify(repsonseRegister.userInfor))
+                window.location="/homepage";
             }
             else{
                 alert(repsonseRegister.description)

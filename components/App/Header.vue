@@ -24,12 +24,19 @@
                         Tuyển Dụng
                     </div>
                 </div>
-                <div class="authen-container contact-child">
+
+                <div v-if=isLogin class="authen-container contact-child">
                     <div class="authen-icon">
                         <font-awesome-icon icon="fa-solid fa-user" />
                     </div>
-                    <NuxtLink class="btn-dang-nhap" :to="{ name: 'userLoginPage'}">Đăng Nhập</NuxtLink>/
-                    <NuxtLink class="btn-dang-nhap" :to="{ name: 'userRegisterPage'}">Đăng Ký</NuxtLink>
+                    <div class="btn-dang-nhap" @click="logout()">Đăng Xuất</div>
+                </div>
+                <div v-else class="authen-container contact-child">
+                    <div class="authen-icon">
+                        <font-awesome-icon icon="fa-solid fa-user" />
+                    </div>
+                    <NuxtLink class="btn-dang-nhap" :to="{ name: 'userLoginPage' }">Đăng Nhập</NuxtLink>/
+                    <NuxtLink class="btn-dang-nhap" :to="{ name: 'userRegisterPage' }">Đăng Ký</NuxtLink>
                 </div>
             </div>
         </div>
@@ -59,14 +66,15 @@
                             Xây dựng cấu hình
                         </div>
                     </div>
-                    <div class="cart-container">
-                        <div class="icon-cart-container">
-                            <NuxtLink class="icon-cart-container" :to="{ name: 'cartPage' }">
-                                <font-awesome-icon icon="fa-solid fa-cart-shopping" /></NuxtLink>
+                    <div @click="cartOnClick()" class="cart-container">
+                        <div  class="icon-cart-container">
+                            <div class="icon-cart-container" :to="{ name: 'cartPage' }">
+                                <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+                            </div>
                             <!-- <font-awesome-icon icon="fa-solid fa-cart-shopping" /> -->
                             <div class="num-cart">23</div>
                         </div>
-                        <NuxtLink class="btn-cart-content" :to="{ name: 'cartPage' }">Giỏ hàng</NuxtLink>
+                        <div class="btn-cart-content" :to="{ name: 'cartPage' }">Giỏ hàng</div>
                     </div>
                 </div>
             </div>
@@ -78,12 +86,42 @@
 export default {
     components: {
     },
+    async beforeMount() {
+        var result = this.checkLogin()
+        this.isLogin = result
+    },
     data() {
         return {
+            isLogin: false,
         };
     },
 
     methods: {
+        checkLogin() {
+            var user = JSON.parse(localStorage.getItem('user'))
+            if (user) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        },
+        logout(){
+            localStorage.clear()
+            location.reload()
+        },
+
+        cartOnClick(){
+            var user = JSON.parse(localStorage.getItem('user'))
+            if (user) {
+                alert('Oke')
+                this.$router.push("/cartPage")
+            }
+            else {
+                alert('Bạn cần đăng nhập!')
+                return
+            }
+        }
     },
 }
 </script>
@@ -150,11 +188,11 @@ export default {
     align-items: center;
 }
 
-.btn-dang-nhap{
+.btn-dang-nhap {
     color: white;
 }
 
-.btn-dang-nhap:hover{
+.btn-dang-nhap:hover {
     color: #CCC;
     cursor: pointer;
     text-decoration: none;

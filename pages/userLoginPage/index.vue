@@ -74,7 +74,8 @@ export default {
             if (repsonseLogin.resultLogin == true) {
                 alert(repsonseLogin.userInfor)
                 localStorage.setItem('user', JSON.stringify(repsonseLogin.userInfor))
-                this.$router.push("/homepage")
+                // this.$router.push("/homepage").go()
+                window.location="/homepage";
             }
             else{
                 alert(repsonseLogin.description)
