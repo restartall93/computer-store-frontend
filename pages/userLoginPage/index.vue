@@ -145,6 +145,12 @@ export default {
     margin-top: 15px;
 }
 .btn-login{
-    background-color: #007bff;
+    background-color: #4267b2;
+    color: white;
+    border: white 1px solid;
+    width: 111px;
+    height: 39px;
+    font-weight: bold;
+    transform: uppercase;
 }
 </style>

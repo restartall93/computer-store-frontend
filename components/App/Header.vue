@@ -3,26 +3,26 @@
         <div id="home-page-contact">
             <div class="home-page-contact-container">
                 <div class="contact-container contact-child">
-                    <div class="contact-details">
+                    <button class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-location-dot" />
                         Hệ thống showroom
-                    </div>
-                    <div class="contact-details">
+                    </button>
+                    <button class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-headset" />
                         Khách Cá Nhân
-                    </div>
-                    <div class="contact-details">
+                    </button>
+                    <button class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-headset" />
                         Khách Doanh Nghiệp
-                    </div>
-                    <div class="contact-details">
+                    </button>
+                    <button class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-newspaper" />
                         Tin Công Nghệ
-                    </div>
-                    <div class="contact-details">
+                    </button>
+                    <button class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-bullhorn" />
                         Tuyển Dụng
-                    </div>
+                    </button>
                 </div>
 
                 <div v-if=isLogin class="authen-container contact-child">
@@ -118,7 +118,7 @@ export default {
                 this.$router.push("/cartPage")
             }
             else {
-                alert('Bạn cần đăng nhập!')
+                alert('BẠN CẦN ĐĂNG NHẬP!')
                 return
             }
         }
@@ -171,9 +171,10 @@ export default {
     background: #0C3175;
     margin-right: 10px;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
     padding: 8px 15px;
-    border-radius: 16px;
+    border-radius: 15px;
+    border: #0C3175;
 }
 
 .authen-icon {

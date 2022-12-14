@@ -23,7 +23,7 @@
                             <div class="label-control">
                                 Số điện thoại:
                             </div>
-                            <input type="text" class="form-control" placeholder="Số điện thoại" v-model="phonenumber" required />
+                            <input type="number" class="form-control" placeholder="Số điện thoại" v-model="phonenumber" required />
                         </div>
                         <div class="control-item-register">
                             <div class="label-control">
