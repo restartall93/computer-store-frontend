@@ -3,29 +3,63 @@
         <div class="dashboard-container">
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                    <div class="statistical p-4">
+                    <div class="statistical p-4 w-100 bg-primary">
                         <div class="d-flex w-100 justify-content-between">
-                            <div class="h3">100</div>
-                            <font-awesome-icon icon="fa-solid fa-gauge" />
+                            <div class="h2">
+                                100
+                            </div>
+                            <div class="h2">
+                                <font-awesome-icon icon="fa-solid fa-users" />
+                            </div>
                         </div>
-                        <div class="mt-5">
-                            Total users
+                        <div class="mt-5 text-uppercase">
+                            tổng số người dùng
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                    <div class="statistical">
-                        Product
+                    <div class="statistical p-4 w-100 bg-success">
+                        <div class="d-flex w-100 justify-content-between">
+                            <div class="h2">
+                                1000
+                            </div>
+                            <div class="h2">
+                                <font-awesome-icon icon="fa-solid fa-cubes" />
+                            </div>
+                        </div>
+                        <div class="mt-5 text-uppercase">
+                            tổng sản phẩm
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                    <div class="statistical">
-                        Tổng đơn hàng
+                    <div class="statistical p-4 w-100 bg-danger">
+                        <div class="d-flex w-100 justify-content-between">
+                            <div class="h2">
+                                1000
+                            </div>
+                            <div class="h2">
+                                <font-awesome-icon icon="fa-solid fa-boxes-stacked" />
+                            </div>
+                        </div>
+                        <div class="mt-5 text-uppercase">
+                            Tổng đơn hàng
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 col-xl-3 mb-3">
-                    <div class="statistical">
-                        Số sp bán được
+                    <div class="statistical p-4 w-100 bg-warning">
+                        <div class="d-flex w-100 justify-content-between">
+                            <div class="h2">
+                                1000
+                            </div>
+                            <div class="h2">
+                                <font-awesome-icon icon="fa-solid fa-cubes-stacked" />
+                            </div>
+                        </div>
+                        <div class="mt-5 text-uppercase">
+                            số sản phẩm bán được
+                        </div>
                     </div>
                 </div>
             </div>
@@ -40,8 +74,7 @@ export default {
 </script>
 
 <style>
-.statistical{
-    background-color: red;
-    height: 250px;
+.statistical {
+    height: 150px;
 }
 </style>

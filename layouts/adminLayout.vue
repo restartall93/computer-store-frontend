@@ -17,21 +17,37 @@
         </div>
         <div id="body-admin" class="d-flex w-100 " style="">
             <div class="vh-100 bg-dark" style="width: 15%;">
-                <a asp-controller="Admin" asp-action="Index" class="menu-item-admin">
-                    <font-awesome-icon icon="fa-solid fa-gauge mr-2" />
-                    Bảng tin
+                <a class="menu-item-admin" href="#">
+                    <div class="">
+                        <font-awesome-icon icon="fa-solid fa-gauge" />
+                    </div>
+                    <div class="p-2">
+                        Bảng tin
+                    </div>
                 </a>
                 <a class="menu-item-admin" href="#">
-                    <font-awesome-icon icon="fa-solid fa-cube" />
-                    Sản phẩm
+                    <div class="">
+                        <font-awesome-icon icon="fa-solid fa-cube" />
+                    </div>
+                    <div class="p-2">
+                        Sản phẩm
+                    </div>
                 </a>
                 <a class="menu-item-admin" href="#">
-                    <font-awesome-icon icon="fa-solid fa-users mr-2" />
-                    User
+                    <div>
+                        <font-awesome-icon icon="fa-solid fa-users" />
+                    </div>
+                    <div class="p-2">
+                        User
+                    </div>
                 </a>
-                <a class="menu-item-admin" href="#">    
-                    <font-awesome-icon icon="fa-solid fa-box" />
-                    Đơn hàng
+                <a class="menu-item-admin" href="#">
+                    <div class="">
+                        <font-awesome-icon icon="fa-solid fa-box" />
+                    </div>
+                    <div class="p-2">
+                        Đơn hàng
+                    </div>
                 </a>
             </div>
             <div id="main-admin" class="vh-100 p-4" style="width: 85%; background-color: #f2f2f2;">
