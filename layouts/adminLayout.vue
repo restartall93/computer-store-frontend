@@ -1,37 +1,44 @@
 <template>
     <div>
-        <div class="header-admin w-100 d-flex justify-content-between px-5 border-bottom border-secondary">
-            <div class="logo-header-admin h-100 d-flex align-items-center">
-                <img src="../assets/img/logo.png" alt="logo" height="50" />
-                <div class="location-header-admin">
-                    <font-awesome-icon icon="fa-solid fa-house" />
-                </div>
+        <div id="header-admin"
+            class="bg-dark w-100 border-bottom border-secondary d-flex justify-content-between align-items-center px-5"
+            style="height: 60px;">
+            <div class="logo-admin-container">
+                <img class="logo-admin" src="../assets/img/logo.png" alt="">
             </div>
-            <div class="d-flex justify-content-end align-items-center">
-                <div class="mr-3">
-                    Xin chào, Admin
+            <div class="text-light d-flex align-items-center">
+                Hello, Admin
+                <div class="ml-1">
+                    <font-awesome-icon icon="fa-sharp fa-solid fa-caret-down" />
                 </div>
-                <div class="avatar bg-dark rounded-circle" style="height: 30px; width: 30px;">
+                <div class="rounded-circle bg-light ml-3" style="height: 40px; width: 40px;">
                 </div>
-
             </div>
         </div>
-
-        <div class="body-admin w-100 d-flex">
-            <div class="menu-admin-container vh-100 bg-dark" style="width: 15%;">
-
+        <div id="body-admin" class="d-flex w-100 " style="">
+            <div class="vh-100 bg-dark" style="width: 15%;">
+                <a asp-controller="Admin" asp-action="Index" class="menu-item-admin">
+                    <font-awesome-icon icon="fa-solid fa-gauge mr-2" />
+                    Bảng tin
+                </a>
+                <a class="menu-item-admin" href="#">
+                    <font-awesome-icon icon="fa-solid fa-cube" />
+                    Sản phẩm
+                </a>
+                <a class="menu-item-admin" href="#">
+                    <font-awesome-icon icon="fa-solid fa-users mr-2" />
+                    User
+                </a>
+                <a class="menu-item-admin" href="#">    
+                    <font-awesome-icon icon="fa-solid fa-box" />
+                    Đơn hàng
+                </a>
             </div>
-            <div class="Main">
+            <div id="main-admin" class="vh-100 p-4" style="width: 85%; background-color: #f2f2f2;">
                 <Nuxt />
             </div>
         </div>
-
-        <div class="footer-admin">
-
-        </div>
     </div>
-
-
 </template>
 
 <script>
@@ -39,10 +46,60 @@
 </script>
 
 <style>
-.header-admin {
-    height: 50px;
-    background-color: #f1f0e5;
+.logo-website {
+    height: 60px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    color: #E50914;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 35px;
 }
 
-.logo-header-admin {}
+.logo-website:hover {
+    color: #E50914;
+    text-decoration: none;
+}
+
+.menu-item-admin {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 30px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.menu-item-admin:hover {
+    background-color: #004d7c;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-website {
+    height: 160px;
+    width: 100%;
+    background-color: #141414;
+    padding: 20px 15%;
+}
+
+.footer-content {
+    color: white;
+    font-size: 15px;
+}
+
+.footer-title {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.logo-admin {
+    width: 80px;
+    height: 80px;
+}
 </style>
