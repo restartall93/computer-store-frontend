@@ -4,7 +4,7 @@
             <div class="menu-app">
                 <Menu></Menu>
             </div>
-            <div class="main-app">
+            <!-- <div class="main-app">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -31,7 +31,7 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="product-content">
             <div class="title-product">

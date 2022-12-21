@@ -6,6 +6,9 @@
             <div class="logo-admin-container">
                 <img class="logo-admin" src="../assets/img/logo.png" alt="">
             </div>
+            <div class="icon-home-page-admin">
+                <font-awesome-icon icon="fa-solid fa-house" />
+            </div>
             <div class="text-light d-flex align-items-center">
                 Hello, Admin
                 <div class="ml-1">
@@ -62,20 +65,10 @@
 </script>
 
 <style>
-.logo-website {
-    height: 60px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    color: #E50914;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 700;
-    font-size: 35px;
-}
 
-.logo-website:hover {
-    color: #E50914;
-    text-decoration: none;
+
+.logo-admin:hover {
+    cursor: pointer;
 }
 
 .menu-item-admin {
@@ -95,27 +88,18 @@
     text-decoration: none;
 }
 
-.footer-website {
-    height: 160px;
-    width: 100%;
-    background-color: #141414;
-    padding: 20px 15%;
-}
-
-.footer-content {
-    color: white;
-    font-size: 15px;
-}
-
-.footer-title {
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
 .logo-admin {
     width: 80px;
     height: 80px;
+}
+
+.icon-home-page-admin{
+    color: white;
+    padding-right: 65%;
+    font-size: 20px;
+}
+
+.icon-home-page-admin:hover {
+    cursor: pointer;
 }
 </style>

@@ -3,26 +3,26 @@
         <div id="home-page-contact">
             <div class="home-page-contact-container">
                 <div class="contact-container contact-child">
-                    <button class="contact-details">
+                    <a class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-location-dot" />
                         Hệ thống showroom
-                    </button>
-                    <button class="contact-details">
+                    </a>
+                    <a class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-headset" />
                         Khách Cá Nhân
-                    </button>
-                    <button class="contact-details">
+                    </a>
+                    <a class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-headset" />
                         Khách Doanh Nghiệp
-                    </button>
-                    <button class="contact-details">
+                    </a>
+                    <a class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-newspaper" />
                         Tin Công Nghệ
-                    </button>
-                    <button class="contact-details">
+                    </a>
+                    <a class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-bullhorn" />
                         Tuyển Dụng
-                    </button>
+                    </a>
                 </div>
 
                 <div v-if=isLogin class="authen-container contact-child">
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                     <div @click="cartOnClick()" class="cart-container">
-                        <div  class="icon-cart-container">
+                        <div class="icon-cart-container">
                             <div class="icon-cart-container" :to="{ name: 'cartPage' }">
                                 <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                             </div>
@@ -106,12 +106,12 @@ export default {
                 return false;
             }
         },
-        logout(){
+        logout() {
             localStorage.clear()
             location.reload()
         },
 
-        cartOnClick(){
+        cartOnClick() {
             var user = JSON.parse(localStorage.getItem('user'))
             if (user) {
                 alert('Oke')

@@ -1,49 +1,49 @@
 <template>
     <div class="menu-left">
         <div class="menu-item">
-            <i class="fa-solid fa-laptop icon-menu"></i>
+            <font-awesome-icon icon="fa-solid fa-laptop icon-menu" />
             <div class="menu-item-content">
                 Laptop - Phụ Kiện
             </div>
         </div>
         <div class="menu-item">
-            <i class="fa-solid fa-computer"></i>
+            <font-awesome-icon icon="fa-solid fa-computer" />
             <div class="menu-item-content">
                 pc đồ hoạ - làm việc
             </div>
         </div>
         <div class="menu-item">
-            <i class="fa-solid fa-computer"></i>
+            <font-awesome-icon icon="fa-solid fa-computer" />
             <div class="menu-item-content">
                 pc gaming
             </div>
         </div>
         <div class="menu-item">
-            <i class="fa-solid fa-microchip"></i>
+            <font-awesome-icon icon="fa-solid fa-microchip" />
             <div class="menu-item-content">
                 linh kiện máy tính
             </div>
         </div>
         <div class="menu-item">
-            <i class="fa-solid fa-hard-drive"></i>
+            <font-awesome-icon icon="fa-solid fa-hard-drive" />
             <div class="menu-item-content">
                 thiết bị lưu trữ
             </div>
         </div>
         <div class="menu-item">
-            <i class="fa-solid fa-desktop"></i>
+            <font-awesome-icon icon="fa-solid fa-desktop" />
             <div class="menu-item-content">
                 màn hình máy tính
             </div>
         </div>
         <div class="menu-item">
-            <i class="fa-solid fa-gamepad"></i>
+            <font-awesome-icon icon="fa-solid fa-gamepad" />
             <div class="menu-item-content">
                 phím chuột,ghế,gear
             </div>
         </div>
         <div class="menu-item">
-            <i class="fa-solid fa-fan"></i>
+            <font-awesome-icon icon="fa-solid fa-fan" />
             <div class="menu-item-content">
                 tản nhiệt pc, cooling
             </div>
@@ -82,5 +82,59 @@
 
 .menu-item:hover .icon-menu {
     color: #ccc;
+}
+
+
+.wrapper {
+    max-width: 960px;
+    margin: 10% auto;
+    text-align: center;
+    line-height: 2em;
+}
+
+.button {
+    border: 3px solid #111;
+    adding: 10px;
+    color: #111;
+    text-decoration: none;
+}
+
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+#xmas-popup .popup-content {
+    width: 600px;
+    height: 600px;
+    background: #bbb;
+    margin: 100px auto;
+    position: relative;
+    border: 5px solid #fff;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 50%;
+    background: #222;
+    border: 3px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    line-height: 0;
+    padding: 9px 0 11px;
+    width: 20px;
+    text-align: center;
+}
+
+.popup:target {
+    display: block;
 }
 </style>
