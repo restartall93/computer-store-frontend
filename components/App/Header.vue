@@ -177,6 +177,12 @@ export default {
     border: #0C3175;
 }
 
+.contact-details:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
 .authen-icon {
     width: 25px;
     height: 25px;
