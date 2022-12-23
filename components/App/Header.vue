@@ -351,12 +351,11 @@ export default {
 
 .popup {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    width: 300px;
+    height: 300px;
     background: rgba(0, 0, 0, 0.6);
     display: none;
+    z-index: 5;
 }
 
 #xmas-popup .popup-content {
