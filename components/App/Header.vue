@@ -7,10 +7,24 @@
                         <font-awesome-icon icon="fa-solid fa-location-dot" />
                         Hệ thống showroom
                     </a>
-                    <a class="contact-details">
-                        <font-awesome-icon icon="fa-solid fa-headset" />
-                        Khách Cá Nhân
-                    </a>
+            
+                    <div class="">
+                        <div id="xmas-popup" class="popup" href="#">
+                            <div class="popup-content">
+                                fwefweffffew
+                                fewjfhuewifh
+                                fwefh
+                                <a href="#" class="close">x</a>
+                            </div>
+                        </div>
+                        <div class="contact-details">
+                            <a href="#xmas-popup" class="contact-details-button">
+                                <font-awesome-icon icon="fa-solid fa-headset" />
+                                Khách Cá Nhân
+                            </a>
+                        </div>
+                    </div>
+
                     <a class="contact-details">
                         <font-awesome-icon icon="fa-solid fa-headset" />
                         Khách Doanh Nghiệp
@@ -315,6 +329,62 @@ export default {
 
 .Build-PC-container {
     width: 150px;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 10% auto;
+    text-align: center;
+    line-height: 2em;
+}
+
+.contact-details-button {
+    border: 1px solid #0C3175;
+    color: white;
+}
+
+.contact-details-button:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+#xmas-popup .popup-content {
+    width: 600px;
+    height: 800px;
+    background: #bbb;
+    margin: 100px auto;
+    position: relative;
+    border: 5px solid #fff;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 50%;
+    background: #222;
+    border: 3px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    line-height: 0;
+    padding: 9px 0 11px;
+    width: 20px;
+    text-align: center;
+}
+
+.popup:target {
+    display: block;
 }
 </style>
   
