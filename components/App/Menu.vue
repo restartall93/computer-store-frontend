@@ -1,29 +1,29 @@
 <template>
     <div class="menu-left">
-        <div class="menu-item">
+        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Laptop'} }">
             <font-awesome-icon icon="fa-solid fa-laptop icon-menu" />
             <div class="menu-item-content">
                 Laptop - Phụ Kiện
             </div>
-        </div>
-        <div class="menu-item">
+        </NuxtLink>
+        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Computer'} }">
             <font-awesome-icon icon="fa-solid fa-computer" />
             <div class="menu-item-content">
                 pc đồ hoạ - làm việc
             </div>
-        </div>
-        <div class="menu-item">
+        </NuxtLink>
+        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Computer'} }">
             <font-awesome-icon icon="fa-solid fa-computer" />
             <div class="menu-item-content">
                 pc gaming
             </div>
-        </div>
-        <div class="menu-item">
+        </NuxtLink>
+        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'CPU'} }">
             <font-awesome-icon icon="fa-solid fa-microchip" />
             <div class="menu-item-content">
                 linh kiện máy tính
             </div>
-        </div>
+        </NuxtLink>
         <div class="menu-item">
             <font-awesome-icon icon="fa-solid fa-hard-drive" />
             <div class="menu-item-content">

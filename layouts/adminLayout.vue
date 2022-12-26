@@ -18,16 +18,16 @@
                 </div>
             </div>
         </div>
-        <div id="body-admin" class="d-flex w-100 " style="">
-            <div class="vh-100 bg-dark" style="width: 15%;">
-                <a class="menu-item-admin" href="#">
+        <div id="body-admin" class="d-flex w-100 "  style="min-height: 100vh;">
+            <div class="vh-100 bg-dark d-sm-none d-xl-block d-lg-block d-md-none" style="width: 15%;">
+                <NuxtLink class="menu-item-admin" :to="{ name: 'dashboardAdmin' }">
                     <div class="">
                         <font-awesome-icon icon="fa-solid fa-gauge" />
                     </div>
                     <div class="p-2">
                         Bảng tin
                     </div>
-                </a>
+                </NuxtLink>
                 <a class="menu-item-admin" href="#">
                     <div class="">
                         <font-awesome-icon icon="fa-solid fa-cube" />

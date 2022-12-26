@@ -220,7 +220,7 @@ import Menu from '../../components/App/Menu.vue'
 export default {
     components: { Menu },
     async beforeMount() {
-        var response = await fetch('https://localhost:7029/api/Product/GetProducts')
+        var response = await fetch('https://localhost:7029/api/Product/GetProductListByCategory?productType=Computer')
             .then(res => 
                 { 
                     return res.json()
