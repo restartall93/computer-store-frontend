@@ -4,44 +4,32 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Mã Sản Phẩm</th>
-                        <th scope="col">Tên Sản Phẩm</th>
-                        <th scope="col">Loại Sản Phẩm</th>
-                        <th scope="col">Giá Tiền</th>
-                        <th scope="col">Ảnh</th>
-                        <th scope="col">Mô tả</th>
-                        <th scope="col">Hành động</th>
+                        <th scope="col">Mã Khách Hàng</th>
+                        <th scope="col">Tên</th>
+                        <th scope="col">Địa chỉ </th>
+                        <th scope="col">Số Điện Thoại</th>
+                        <th scope="col">Email đăng nhập</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
+                    <tr v-for="(user, index) in userList">
+                        <td>
+                            <div class="admin-user-id">{{ user.id }}</div>   
+                        </td>
+                        <td>
+                           <div class="admin-user-name">{{ user.name }}</div>
+                        </td>
+                        <td>
+                            <div class="admin-user-address">{{ user.address }}</div>
+                        </td>
+                        <td>
+                            <div class="admin-user-phoneNumber">{{ user.phoneNumber }}</div>
+                        </td>
+                        <td>
+                            <div class="admin-user-username">{{ user.username }}</div>
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
+
                 </tbody>
             </table>
         </div>
@@ -51,6 +39,24 @@
 <script>
 export default {
     layout: "adminLayout",
+    async beforeMount() {
+        this.postUserList()
+    },
+    data() {
+        return {
+            userList: [],
+        };
+    },
+    methods: {
+        async postUserList() {
+            var response = await fetch('https://localhost:7029/api/User/UserLogin')
+                .then(res => {
+                    return res.json()
+                })
+            this.userList = response
+            console.log(JSON.stringify(this.userList))
+        }
+    },
 }
 </script>
 
