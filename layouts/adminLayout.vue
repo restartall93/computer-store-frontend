@@ -33,7 +33,7 @@
                         <font-awesome-icon icon="fa-solid fa-cube" />
                     </div>
                     <div class="p-2">
-                        Sản phẩm
+                        <NuxtLink class="btn-admin-general" :to="{ name: 'adminProduct' }">Sản phẩm</NuxtLink>
                     </div>
                 </a>
                 <a class="menu-item-admin" href="#">
@@ -41,7 +41,7 @@
                         <font-awesome-icon icon="fa-solid fa-users" />
                     </div>
                     <div class="p-2">
-                        User
+                        <NuxtLink class="btn-admin-general" :to="{ name: 'adminUserManagement' }">User</NuxtLink>
                     </div>
                 </a>
                 <a class="menu-item-admin" href="#">

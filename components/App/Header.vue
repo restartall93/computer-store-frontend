@@ -77,18 +77,18 @@
                             <font-awesome-icon icon="fa-solid fa-computer" />
                         </div>
                         <div class="Build-PC-content cart-content">
-                            Xây dựng cấu hình
+                            <NuxtLink class="btn-build-PC" :to="{ name: 'buildPcPage' }">Xây dựng cấu hình</NuxtLink>
                         </div>
                     </div>
                     <div @click="cartOnClick()" class="cart-container">
                         <div class="icon-cart-container">
-                            <div class="icon-cart-container" :to="{ name: 'cartPage' }">
+                            <div class="icon-cart-container">
                                 <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                             </div>
                             <!-- <font-awesome-icon icon="fa-solid fa-cart-shopping" /> -->
                             <div class="num-cart">23</div>
                         </div>
-                        <div class="btn-cart-content" :to="{ name: 'cartPage' }">Giỏ hàng</div>
+                        <div class="btn-cart-content">Giỏ hàng</div>
                     </div>
                 </div>
             </div>
@@ -384,6 +384,10 @@ export default {
 
 .popup:target {
     display: block;
+}
+
+.btn-build-PC{
+
 }
 </style>
   
