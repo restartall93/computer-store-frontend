@@ -11,7 +11,8 @@
                             <div class="label-control">
                                 Email đăng ký:
                             </div>
-                            <input type="text" class="form-control" placeholder="Email" v-model="email" required />
+                            <input type="email" class="form-control"
+                                placeholder="Email" v-model="email" required />
                         </div>
                         <div class="control-item-register">
                             <div class="label-control">
@@ -23,19 +24,22 @@
                             <div class="label-control">
                                 Số điện thoại:
                             </div>
-                            <input type="number" class="form-control" placeholder="Số điện thoại" v-model="phonenumber" required />
+                            <input pattern="[0]{1}[3-9]{1}[0-9]{8}" class="form-control" placeholder="Số điện thoại"
+                                v-model="phonenumber" required />
                         </div>
                         <div class="control-item-register">
                             <div class="label-control">
                                 Mật khẩu:
                             </div>
-                            <input type="password" class="form-control" placeholder="Mật khẩu" v-model="password" required />
+                            <input type="password" class="form-control" placeholder="Mật khẩu" v-model="password"
+                                required />
                         </div>
                         <div class="control-item-register">
                             <div class="label-control">
                                 Xác nhận mật khẩu:
                             </div>
-                            <input type="password" class="form-control" placeholder="Nhập lại mật khẩu" v-model="confirmPassword" required />
+                            <input type="password" class="form-control" placeholder="Nhập lại mật khẩu"
+                                v-model="confirmPassword" required />
                         </div>
                         <div class="btn-login-container control-item">
                             <button class="btn-login" type="submit">
@@ -55,22 +59,22 @@ export default {
     },
     data() {
         return {
-            email:'',
-            name:'',
-            phonenumber:'',
-            password:'',
-            confirmPassword:''
+            email: '',
+            name: '',
+            phonenumber: '',
+            password: '',
+            confirmPassword: ''
         };
     },
 
     methods: {
         async userRegister() {
-            if(this.password != this.confirmPassword){
+            if (this.password != this.confirmPassword) {
                 alert("k giong")
                 return
             }
             var userRegisterRequest = {
-                email:  this.email,
+                email: this.email,
                 name: this.name,
                 phonenumber: this.phonenumber,
                 password: this.password,
@@ -88,9 +92,9 @@ export default {
             if (repsonseRegister.resultRegister == true) {
                 alert(repsonseRegister.description)
                 localStorage.setItem('user', JSON.stringify(repsonseRegister.userInfor))
-                window.location="/homepage";
+                window.location = "/homepage";
             }
-            else{
+            else {
                 alert(repsonseRegister.description)
                 return
             }

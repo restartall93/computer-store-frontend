@@ -12,21 +12,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(user, index) in userList">
+                    <tr >
                         <td>
-                            <div class="admin-user-id">{{ user.id }}</div>   
+                             
                         </td>
                         <td>
-                           <div class="admin-user-name">{{ user.name }}</div>
+                           
                         </td>
                         <td>
-                            <div class="admin-user-address">{{ user.address }}</div>
+                            
                         </td>
                         <td>
-                            <div class="admin-user-phoneNumber">{{ user.phoneNumber }}</div>
+                            
                         </td>
                         <td>
-                            <div class="admin-user-username">{{ user.userName }}</div>
+                            
                         </td>
                     </tr>
 
@@ -39,24 +39,24 @@
 <script>
 export default {
     layout: "adminLayout",
-    async beforeMount() {
-        this.postUserList()
-    },
-    data() {
-        return {
-            userList: [],
-        };
-    },
-    methods: {
-        async postUserList() {
-            var response = await fetch('https://localhost:7029/api/User/GetUsers')
-                .then(res => {
-                    return res.json()
-                })
-            this.userList = response
-            console.log(JSON.stringify(this.userList))
-        }
-    },
+    // async beforeMount() {
+    //     this.postUserList()
+    // },
+    // data() {
+    //     return {
+    //         userList: [],
+    //     };
+    // },
+    // methods: {
+    //     async postUserList() {
+    //         var response = await fetch('https://localhost:7029/api/User/GetUsers')
+    //             .then(res => {
+    //                 return res.json()
+    //             })
+    //         this.userList = response
+    //         console.log(JSON.stringify(this.userList))
+    //     }
+    // },
 }
 </script>
 

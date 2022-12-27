@@ -49,7 +49,7 @@
                         <font-awesome-icon icon="fa-solid fa-box" />
                     </div>
                     <div class="p-2">
-                        Đơn hàng
+                        <NuxtLink class="btn-admin-general" :to="{ name: 'adminProductManagement' }">Đơn Hàng</NuxtLink>
                     </div>
                 </a>
             </div>

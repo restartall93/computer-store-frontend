@@ -93,8 +93,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-buy">
-                            ĐẶT MUA NGAY
+                        <div @click="addToCart()" class="btn-buy">
+                            ĐẶT MUA NGAY 
                             <br>
                             Giao hàng tận nơi nhanh chóng
                         </div>
@@ -309,6 +309,10 @@ export default {
             var response = await fetch('https://localhost:7029/api/Product/GetDetail?id='+ this.productId)
                 .then((res) => res.json())
             this.product = response
+        },
+
+        addToCart(){
+            alert("OK!")
         }
     },
 
@@ -446,6 +450,11 @@ export default {
     padding-top: 15px;
     color: #fffafa;
     font-weight: bold;
+    border-radius: 10px;
+}
+
+.btn-buy:hover {
+    cursor: pointer;
 }
 
 .product-detail-read {
