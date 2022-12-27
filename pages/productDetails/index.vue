@@ -1,14 +1,13 @@
 <template>
     <div class="header-product-details-container">
         <div class="header-product">
-            {{product.name}}
+            {{ product.name }}
         </div>
         <div class="product-details">
             <div class="row">
                 <div class="col-md-12 col-lg-5 col-xl-5">
                     <div class="img-product">
-                        <img class="img-product-details"
-                        v-bind:src="'https://localhost:7029'+product.image" alt="">
+                        <img class="img-product-details" v-bind:src="'https://localhost:7029' + product.image" alt="">
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-7 col-xl-7">
@@ -17,19 +16,19 @@
                             Thông số sản phẩm
                         </div>
                         <div class="product-details-content">
-                            <li>CPU: {{product.cpu}}</li>
+                            <li>CPU: {{ product.cpu }}</li>
                         </div>
                         <div class="product-details-content">
-                            <li>RAM: {{product.ram}}</li>
+                            <li>RAM: {{ product.ram }}</li>
                         </div>
                         <div class="product-details-content">
-                            <li>Ổ cứng: {{product.drive}}</li>
+                            <li>Ổ cứng: {{ product.drive }}</li>
                         </div>
                         <div class="product-details-content">
-                            <li>VGA: {{product.vga}}</li>
+                            <li>VGA: {{ product.vga }}</li>
                         </div>
                         <div class="product-details-content">
-                            <li>Màn hình: {{product.monitor}}</li>
+                            <li>Màn hình: {{ product.monitor }}</li>
                         </div>
                         <div class="product-details-content">
                             <li>Bàn phím: có đèn led</li>
@@ -94,7 +93,7 @@
                             </div>
                         </div>
                         <div @click="addToCart()" class="btn-buy">
-                            ĐẶT MUA NGAY 
+                            ĐẶT MUA NGAY
                             <br>
                             Giao hàng tận nơi nhanh chóng
                         </div>
@@ -170,7 +169,8 @@
                                 hình ảnh không bị biến đổi khi bạn nhìn từ góc nghiêng tạo cảm giác thoải mái. Lớp chống
                                 chói Anti Glare đem đến những hình ảnh sắc nét với màu sắc chính xác dù bạn sử dụng ở
                                 nơi có cường độ sáng cao như ngoài trời mà không lo mắt bị mỏi hay lóa.</p>
-                            <p><img class="img-read" src="../../assets/img/61677_laptop_gigabyte_gaming_g5_2.png" alt=""></p>
+                            <p><img class="img-read" src="../../assets/img/61677_laptop_gigabyte_gaming_g5_2.png"
+                                    alt=""></p>
                             <p>Không dùng lại ở đó, laptop sở hữu tần số quét màn hình 144 Hz có khả năng tái tạo khung
                                 hình cực nhanh, hạn chế tối đa tình trạng giật lag, lưu bóng hay xé hình khi nhân vật có
                                 các chuyển động nhanh. Giúp bạn phản ứng nhanh chóng khi chơi game hay chỉnh sửa video.
@@ -305,19 +305,44 @@ export default {
     },
 
     methods: {
-        async init(){
-            var response = await fetch('https://localhost:7029/api/Product/GetDetail?id='+ this.productId)
+        async init() {
+            var response = await fetch('https://localhost:7029/api/Product/GetDetail?id=' + this.productId)
                 .then((res) => res.json())
             this.product = response
         },
 
-        addToCart(){
-            alert("OK!")
-        }
+        async addToCart() {
+            var user = JSON.parse(localStorage.getItem('user'))
+            if (user) {
+                var addToCartRequest = {
+                    productId: this.productId,
+                    userId: user.id
+                }
+                var repsonseAddToCart = await fetch('https://localhost:7029/api/ProductHandle/AddToCart',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(addToCartRequest)
+                }
+            ).then((res) => res.json())
+            if(repsonseAddToCart.id != 0){
+                alert("Thêm thành công")
+                this.$router.push("/cartPage")
+            }
+                
+            }
+            else {
+                alert('BẠN CẦN ĐĂNG NHẬP!')
+                return
+            }
+        },
+
     },
 
     watch: {
-        $route(to, from){
+        $route(to, from) {
             this.init()
             window.scrollTo(0, 0)
         }

@@ -28,7 +28,7 @@
                         <div class="cart-detail-name">{{ cartDetail.name }}</div>
                     </td>
                     <td>
-                        <img class="img-cart-detail" v-bind:src="'https://localhost:7029'+cartDetail.image" alt="">
+                        <img class="img-cart-detail" v-bind:src="'https://localhost:7029' + cartDetail.image" alt="">
                     </td>
                     <td>
                         <div class="cart-detail-general">{{ cartDetail.price }}</div>
@@ -37,14 +37,27 @@
                         <div class="cart-detail-general">{{ cartDetail.quantity }}</div>
                     </td>
                     <td>
-                        <div class="cart-detail-general">{{ cartDetail.quantity }}</div>
+                        <div class="cart-detail-general">{{ cartDetail.quantity * cartDetail.price }}</div>
                     </td>
                     <td>
-                        <div class="cart-detail-general">{{ cartDetail.price }}</div>
+                        <div class="cart-detail-general">Xoá</div>
                     </td>
                 </tr>
             </tbody>
         </table>
+        <div class="w-100 bg-dark my-3" style="height: 1px;">
+        </div>
+        <div class="w-100 my-3 px-5 d-flex justify-content-between">
+            <div>
+                Tổng tiền:
+            </div>
+            <div>
+                {{ totalPrice.toLocaleString('en-US', { style: 'currency', currency: 'USD'})}}
+            </div>
+        </div>
+        <div class="pay">
+            <div class="pay-content">Thanh Toán</div>
+        </div>
     </div>
 </template>
 
@@ -57,6 +70,7 @@ export default {
     data() {
         return {
             cartDetailList: [],
+            totalPrice: 0,
         };
     },
 
@@ -70,6 +84,7 @@ export default {
                 })
             this.cartDetailList = response
             console.log(JSON.stringify(this.cartDetailList))
+            this.totalPrice = this.cartDetailList.reduce((total, cartDetail) => total + (cartDetail.price) * cartDetail.quantity, 0)
         }
     },
 
@@ -100,7 +115,30 @@ export default {
     width: 10%;
 }
 
-.img-cart-detail{
+.img-cart-detail {
     height: 70px;
+}
+
+.pay {
+    width: 400px;
+    height: 50px;
+    margin-left: 700px;
+    background-color: #ed1b24;
+}
+
+.pay-content {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 10px;
+    color: white;
+}
+
+.pay-content:hover,
+.pay:hover {
+    cursor: pointer;
 }
 </style>
