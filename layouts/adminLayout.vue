@@ -28,30 +28,30 @@
                         Bảng tin
                     </div>
                 </NuxtLink>
-                <a class="menu-item-admin" href="#">
+                <NuxtLink class="menu-item-admin" :to="{ name: 'adminProduct' }">
                     <div class="">
                         <font-awesome-icon icon="fa-solid fa-cube" />
                     </div>
                     <div class="p-2">
-                        <NuxtLink class="btn-admin-general" :to="{ name: 'adminProduct' }">Sản phẩm</NuxtLink>
+                        Sản phẩm
                     </div>
-                </a>
-                <a class="menu-item-admin" href="#">
-                    <div>
+                </NuxtLink>
+                <NuxtLink class="menu-item-admin"  :to="{ name: 'adminUserManagement' }">
+                    <div class=" ">
                         <font-awesome-icon icon="fa-solid fa-users" />
                     </div>
                     <div class="p-2">
-                        <NuxtLink class="btn-admin-general" :to="{ name: 'adminUserManagement' }">User</NuxtLink>
+                        User
                     </div>
-                </a>
-                <a class="menu-item-admin" href="#">
+                </NuxtLink>
+                <NuxtLink class="menu-item-admin" :to="{ name: 'adminProductManagement' }">
                     <div class="">
                         <font-awesome-icon icon="fa-solid fa-box" />
                     </div>
                     <div class="p-2">
-                        <NuxtLink class="btn-admin-general" :to="{ name: 'adminProductManagement' }">Đơn Hàng</NuxtLink>
+                        Đơn Hàng
                     </div>
-                </a>
+                </NuxtLink>
             </div>
             <div id="main-admin" class="vh-100 p-4" style="width: 85%; background-color: #f2f2f2;">
                 <Nuxt />
@@ -83,7 +83,7 @@
 }
 
 .menu-item-admin:hover {
-    background-color: #004d7c;
+    background-color: #1d2124;
     color: white;
     text-decoration: none;
 }

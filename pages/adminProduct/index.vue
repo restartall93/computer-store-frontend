@@ -1,9 +1,10 @@
 <template>
     <div>
         <div class="w-100 d-flex justify-content-end">
-            <NuxtLink class="mr-3 text-light p-3 bg-primary "
+            <NuxtLink class="add-product d-flex mr-3 text-light p-3 bg-primary "
                 :to="{ path: 'adminProduct/CreateEditProduct', query: { 'productId': 0 } }">
-                <font-awesome-icon icon="fa-solid fa-plus" />
+                <div class=""><font-awesome-icon icon="fa-solid fa-plus" /> </div>
+                <div class="add-product-content ml-2">Thêm mới sản phẩm</div>
             </NuxtLink>
         </div>
         <div class="table-responsive">
@@ -84,5 +85,7 @@ export default {
 </script>
 
 <style>
-
+.add-product:hover {
+    text-decoration: none;
+}
 </style>

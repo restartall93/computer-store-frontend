@@ -96,6 +96,7 @@ export default {
     padding-left: 10%;
 }
 
+
 .user-login-container {
     width: 100%;
     min-height: 50px;
@@ -136,22 +137,5 @@ export default {
 
 .text-control-register1 {
     font-size: 14px;
-}
-
-.btn-dang-ky {
-    font-size: 14px;
-    color: #0f5b9a;
-    font-weight: bold;
-}
-
-.btn-dang-ky:hover {
-    text-decoration: none;
-    color: #0c3175;
-    cursor: pointer;
-}
-
-.btn-login-container {
-    justify-content: center;
-    margin-top: 15px;
 }
 </style> 
