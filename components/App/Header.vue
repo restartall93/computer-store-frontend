@@ -73,11 +73,11 @@
                 </div>
                 <div class="homepage-header-more">
                     <div class="Build-PC-container cart-container">
-                        <div class="Build-PC-icon-container icon-cart-container">
+                        <div class="icon-cart-container">
                             <font-awesome-icon icon="fa-solid fa-computer" />
                         </div>
                         <div class="Build-PC-content cart-content">
-                            <NuxtLink class="btn-build-PC" :to="{ name: 'buildPcPage' }">Xây dựng cấu hình</NuxtLink>
+                            <NuxtLink class="btn-cart-content" :to="{ name: 'buildPcPage' }">Xây dựng cấu hình</NuxtLink>
                         </div>
                     </div>
                     <div @click="cartOnClick()" class="cart-container">
@@ -85,7 +85,6 @@
                             <div class="icon-cart-container">
                                 <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                             </div>
-                            <!-- <font-awesome-icon icon="fa-solid fa-cart-shopping" /> -->
                             <div class="num-cart">23</div>
                         </div>
                         <div class="btn-cart-content">Giỏ hàng</div>
@@ -292,7 +291,9 @@ export default {
     align-items: center;
     color: #0f5b9a;
 }
-
+.icon-cart-container:hover {
+    cursor: pointer;
+}
 
 .btn-cart-content {
     width: 100%;
@@ -309,6 +310,7 @@ export default {
 .btn-cart-content:hover {
     color: black;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .num-cart {
@@ -386,8 +388,8 @@ export default {
     display: block;
 }
 
-.btn-build-PC{
-
+.Build-PC-content{
+    margin-top: 4px;
 }
 </style>
   

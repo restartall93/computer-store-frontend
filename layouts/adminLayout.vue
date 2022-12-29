@@ -18,8 +18,8 @@
                 </div>
             </div>
         </div>
-        <div id="body-admin" class="d-flex w-100 "  style="min-height: 100vh;">
-            <div class="vh-100 bg-dark d-sm-none d-xl-block d-lg-block d-md-none" style="width: 15%;">
+        <div id="body-admin" class="d-flex w-100 " style="min-height: 100vh;">
+            <div class="bg-dark vh-100 d-sm-none d-xl-block d-lg-block d-md-none" style="width: 15%;">
                 <NuxtLink class="menu-item-admin" :to="{ name: 'dashboardAdmin' }">
                     <div class="">
                         <font-awesome-icon icon="fa-solid fa-gauge" />
@@ -58,55 +58,6 @@
             </div>
         </div>
         <div>
-            <div class="footer-container-1 px-xl-5 row mb-3">
-                <div class="col-xl-6 col-md-6 col-sm-12 row">
-                    <div class="footer-container-1-item col-6">
-                        <font-awesome-icon icon="fa-solid fa-truck-fast" />
-                        <div class="footer-content">
-                            <div class="footer-container-1-content-1">
-                                CHÍNH SÁCH GIAO HÀNG
-                            </div>
-                            <div class="footer-container-1-content-2">
-                                Nhận hàng và thanh toán tại nhà
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-container-1-item col-6">
-                        <font-awesome-icon icon="fa-solid fa-rotate" />
-                        <div class="footer-content">
-                            <div class="footer-container-1-content-1">
-                                ĐỔI TRẢ DỄ DÀNG
-                            </div>
-                            <div class="footer-container-1-content-2">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-md-6 col-sm-12 row">
-                    <div class="footer-container-1-item col-6">
-                        <font-awesome-icon icon="fa-regular fa-credit-card" />
-                        <div class="footer-content">
-                            <div class="footer-container-1-content-1">
-                                THANH TOÁN TIỆN LỢI
-                            </div>
-                            <div class="footer-container-1-content-2">
-                                Trả tiền mặt, CK, trả góp 0%
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-container-1-item col-6">
-                        <font-awesome-icon icon="fa-solid fa-comments" />
-                        <div class="footer-content">
-                            <div class="footer-container-1-content-1">
-                                HỖ TRỢ NHIỆT TÌNH
-                            </div>
-                            <div class="footer-container-1-content-2">
-                                Tư vấn, giải đáp mọi thắc mắc
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </template>
@@ -150,5 +101,14 @@
 
 .icon-home-page-admin:hover {
     cursor: pointer;
+}
+
+.btn-admin-general {
+    color: white;
+}
+
+.btn-admin-general:hover {
+    text-decoration: none;
+    color: white;
 }
 </style>

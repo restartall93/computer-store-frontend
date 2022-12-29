@@ -66,6 +66,7 @@
     align-items: center;
     padding: 0 15px;
     font-size: 20px;
+    color: black;
 }
 
 .menu-item-content {
@@ -78,6 +79,7 @@
     color: white;
     background-color: #0f5b9a;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .menu-item:hover .icon-menu {
