@@ -10,7 +10,7 @@
                 <font-awesome-icon icon="fa-solid fa-house" />
             </div>
             <div class="text-light d-flex align-items-center">
-                Hello, Admin
+                Hello, {{ adminName }}
                 <div class="ml-1">
                     <font-awesome-icon icon="fa-sharp fa-solid fa-caret-down" />
                 </div>
@@ -36,7 +36,7 @@
                         Sản phẩm
                     </div>
                 </NuxtLink>
-                <NuxtLink class="menu-item-admin"  :to="{ name: 'adminUserManagement' }">
+                <NuxtLink class="menu-item-admin" :to="{ name: 'adminUserManagement' }">
                     <div class=" ">
                         <font-awesome-icon icon="fa-solid fa-users" />
                     </div>
@@ -63,7 +63,22 @@
 </template>
 
 <script>
-
+export default {
+    async beforeMount() {
+        var admin = JSON.parse(localStorage.getItem('admin'))
+        if (admin) {
+            this.adminName = admin.name;
+        }
+        else {
+            this.$router.push("/adminLogin")
+        }
+    },
+    data() {
+        return {
+            adminName: ''
+        }
+    },
+}
 </script>
 
 <style>

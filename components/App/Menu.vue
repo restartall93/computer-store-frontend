@@ -1,6 +1,6 @@
 <template>
     <div class="menu-left">
-        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Laptop'} }">
+        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Lap-top'} }">
             <font-awesome-icon icon="fa-solid fa-laptop icon-menu" />
             <div class="menu-item-content">
                 Laptop - Phụ Kiện
@@ -24,30 +24,30 @@
                 linh kiện máy tính
             </div>
         </NuxtLink>
-        <div class="menu-item">
+        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Drive'} }">
             <font-awesome-icon icon="fa-solid fa-hard-drive" />
             <div class="menu-item-content">
                 thiết bị lưu trữ
             </div>
-        </div>
-        <div class="menu-item">
+        </NuxtLink>
+        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Screen'} }">
             <font-awesome-icon icon="fa-solid fa-desktop" />
             <div class="menu-item-content">
                 màn hình máy tính
             </div>
-        </div>
-        <div class="menu-item">
+        </NuxtLink>
+        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Gear'} }">
             <font-awesome-icon icon="fa-solid fa-gamepad" />
             <div class="menu-item-content">
                 phím chuột,ghế,gear
             </div>
-        </div>
-        <div class="menu-item">
+        </NuxtLink>
+        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Fan'} }">
             <font-awesome-icon icon="fa-solid fa-fan" />
             <div class="menu-item-content">
                 tản nhiệt pc, cooling
             </div>
-        </div>
+        </NuxtLink>
     </div>
 </template>
 

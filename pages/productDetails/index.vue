@@ -15,7 +15,7 @@
                         <div class="product-general">
                             Thông số sản phẩm
                         </div>
-                        <div class="product-details-content">
+                        <div v-if="product.cpu != 'none'" class="product-details-content">
                             <li>CPU: {{ product.cpu }}</li>
                         </div>
                         <div class="product-details-content">
