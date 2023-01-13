@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="title-product">
+    <div class="w-100" style="padding: 0 8%;">
+        <div class="title-product text-uppercase font-weight-bold">
             {{ productType }}
         </div>
         <div class="row">
@@ -55,3 +55,9 @@ export default {
     }
 };
 </script>
+<style>
+.title-product {
+    font-size: 35px;
+    color: #0f5b9a;
+}
+</style>

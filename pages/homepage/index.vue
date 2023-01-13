@@ -32,16 +32,27 @@
                     </a>
                 </div>
             </div> -->
+            <div class="slide-container px-5">
+                <img v-if="i == 1" class="w-100 h-100" src='../../assets/img/slide_1.jpg'>
+                <img v-if="i == 2" class="w-100 h-100" src='../../assets/img/slide_2.png'>
+                <img v-if="i == 3" class="w-100 h-100" src='../../assets/img/slide_3.jpg'>
+                <div class="fixed-bottom">
+                    <div>a</div>
+                    <div>a</div>
+                    <div>a</div>
+                </div>
+            </div>
         </div>
         <div class="product-content">
             <div class="title-product">
-                laptop - phụ kiện
+                laptop - phụ kiện {{ i }}
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in laptopList">
                     <div class="card-item">
-                        <NuxtLink class="txt-details" :to="{ name: 'productDetails', query: {'productId': product.id} }">
-                            <img class="img-1" v-bind:src="'https://localhost:7029'+product.image" alt="">
+                        <NuxtLink class="txt-details"
+                            :to="{ name: 'productDetails', query: { 'productId': product.id } }">
+                            <img class="img-1" v-bind:src="'https://localhost:7029' + product.image" alt="">
                             <div class="img-content">
                                 {{ product.name }}
                             </div>
@@ -221,20 +232,32 @@ export default {
     components: { Menu },
     async beforeMount() {
         var response = await fetch('https://localhost:7029/api/Product/GetProductListByCategory?productType=Computer')
-            .then(res => 
-                { 
-                    return res.json()
-                })
+            .then(res => {
+                return res.json()
+            })
         this.laptopList = response
+        setInterval(this.myTimer ,3000)
     },
 
     data() {
         return {
-            laptopList: []
+            laptopList: [],
+            backgroundList: [],
+            backgroundCurrent: '',
+            i: 1,
         }
-    }
+    },
 
-
+    methods: {
+        myTimer() {
+            if(this.i == 3){
+                this.i = 1;
+            }
+            else{
+                this.i++;
+            }
+        }
+    },
 };
 </script>
 <style>
@@ -245,6 +268,16 @@ export default {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+.menu-app {
+    width: 250px;
+    min-height: 500px;
+}
+
+.slide-container {
+    width: calc(100% - 250px);
+    height: 450px;
 }
 
 .card-item {
@@ -295,5 +328,9 @@ export default {
     align-items: center;
     justify-content: center;
     color: #0f5b9a;
+}
+
+@keyframes{
+
 }
 </style>

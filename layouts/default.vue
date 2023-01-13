@@ -35,11 +35,6 @@ export default {
   background-color: #f0f0f0;
 }
 
-.menu-app {
-  width: 20%;
-  min-height: 500px;
-}
-
 .main-app {
   width: 80%;
   min-height: 500px;
