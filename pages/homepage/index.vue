@@ -45,7 +45,7 @@
         </div>
         <div class="product-content">
             <div class="title-product">
-                laptop - phụ kiện {{ i }}
+                laptop - phụ kiện 
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in laptopList">
@@ -261,6 +261,9 @@ export default {
 };
 </script>
 <style>
+.title-product{
+    font-size: 30px;
+}
 .product-content {
     width: 100%;
     min-height: 2500px;
@@ -306,7 +309,7 @@ export default {
 }
 
 .status-product {
-    font-size: 10px;
+    font-size: 15px;
     color: red;
     padding: 0 3%;
 }

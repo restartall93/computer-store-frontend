@@ -1,6 +1,6 @@
 <template>
     <div class="w-100" style="padding: 0 8%;">
-        <div class="title-product text-uppercase font-weight-bold">
+        <div class="title-product-category text-uppercase font-weight-bold">
             {{ productType }}
         </div>
         <div class="row">
@@ -12,7 +12,7 @@
                             {{ product.name }}
                         </div>
                     </NuxtLink>
-                    <div class="status-product">
+                    <div class="status-product ">
                         Liên hệ
                     </div>
                     <div class="prize-product">
@@ -56,8 +56,23 @@ export default {
 };
 </script>
 <style>
-.title-product {
-    font-size: 35px;
+.title-product-category {
+    font-size: 25px;
     color: #0f5b9a;
+}
+
+.img-content{
+    font-size: 30px;
+}
+
+.prize-product{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.status-product{
+    font-size: 15px;
+    margin-top: 4px
 }
 </style>
