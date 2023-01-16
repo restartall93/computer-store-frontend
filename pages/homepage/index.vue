@@ -57,7 +57,7 @@
                                 {{ product.name }}
                             </div>
                         </NuxtLink>
-                        <div class="status-product">
+                        <div class="status-product-homepage">
                             Liên hệ
                         </div>
                         <div class="prize-product">
@@ -299,19 +299,21 @@ export default {
 
 .img-content {
     width: 100%;
-    font-size: 13px;
+    font-size: 15px;
     padding: 0 3%;
     color: black;
 }
+
 
 .txt-details:hover {
     text-decoration: none;
 }
 
-.status-product {
+.status-product-homepage {
     font-size: 15px;
     color: red;
     padding: 0 3%;
+    margin-top: 35px;
 }
 
 .prize-product {
@@ -333,7 +335,4 @@ export default {
     color: #0f5b9a;
 }
 
-@keyframes{
-
-}
 </style>
