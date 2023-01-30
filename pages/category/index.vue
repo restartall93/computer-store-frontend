@@ -8,7 +8,7 @@
                 <div class="card-item">
                     <NuxtLink class="txt-details" :to="{ name: 'productDetails', query: { 'productId': product.id } }">
                         <img class="img-1" v-bind:src="'https://localhost:7029' + product.image" alt="">
-                        <div class="img-content">
+                        <div class="img-content-category">
                             {{ product.name }}
                         </div>
                     </NuxtLink>
@@ -55,14 +55,18 @@ export default {
     }
 };
 </script>
-<style>
+<style scoped>
 .title-product-category {
     font-size: 25px;
     color: #0f5b9a;
 }
 
-.img-content{
-    font-size: 30px;
+.img-content-category{
+    width: 100%;
+    font-size: 13px;
+    padding: 0 3%;
+    color: black;
+    height: 80px;
 }
 
 .prize-product{

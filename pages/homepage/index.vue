@@ -45,7 +45,7 @@
         </div>
         <div class="product-content">
             <div class="title-product">
-                laptop - phụ kiện 
+                laptop - phụ kiện
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in laptopList">
@@ -74,48 +74,24 @@
                 pc đồ hoạ - làm việc
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in computerList">
                     <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-            </div>
-            <div class="title-product">
-                pc gaming
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
+                        <NuxtLink class="txt-details"
+                            :to="{ name: 'productDetails', query: { 'productId': product.id } }">
+                            <img class="img-1" v-bind:src="'https://localhost:7029' + product.image" alt="">
+                            <div class="img-content">
+                                {{ product.name }}
+                            </div>
+                        </NuxtLink>
+                        <div class="status-product-homepage">
+                            Liên hệ
+                        </div>
+                        <div class="prize-product">
+                            {{ product.price }}
+                            <div class="icon-cast-product">
+                                <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -124,23 +100,24 @@
                 cpu - bộ vi xử lý
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in cpuList">
                     <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
+                        <NuxtLink class="txt-details"
+                            :to="{ name: 'productDetails', query: { 'productId': product.id } }">
+                            <img class="img-1" v-bind:src="'https://localhost:7029' + product.image" alt="">
+                            <div class="img-content">
+                                {{ product.name }}
+                            </div>
+                        </NuxtLink>
+                        <div class="status-product-homepage">
+                            Liên hệ
+                        </div>
+                        <div class="prize-product">
+                            {{ product.price }}
+                            <div class="icon-cast-product">
+                                <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -231,17 +208,35 @@ import Menu from '../../components/App/Menu.vue'
 export default {
     components: { Menu },
     async beforeMount() {
-        var response = await fetch('https://localhost:7029/api/Product/GetProductListByCategory?productType=Computer')
+        //Get laptop list
+        var responseLaptop = await fetch('https://localhost:7029/api/Product/GetProductListByCategory?productType=Lap-top')
             .then(res => {
                 return res.json()
             })
-        this.laptopList = response
-        setInterval(this.myTimer ,3000)
+        this.laptopList = responseLaptop
+
+        // get computer list
+        var responseComputer = await fetch('https://localhost:7029/api/Product/GetProductListByCategory?productType=Computer')
+            .then(res => {
+                return res.json()
+            })
+        this.computerList = responseComputer
+        setInterval(this.myTimer, 3000)
+
+        // get cpu list
+        var responseCPU = await fetch('https://localhost:7029/api/Product/GetProductListByCategory?productType=CPU')
+            .then(res => {
+                return res.json()
+            })
+        this.cpuList = responseCPU
+        setInterval(this.myTimer, 3000)
     },
 
     data() {
         return {
             laptopList: [],
+            computerList: [],
+            cpuList: [],
             backgroundList: [],
             backgroundCurrent: '',
             i: 1,
@@ -250,10 +245,10 @@ export default {
 
     methods: {
         myTimer() {
-            if(this.i == 3){
+            if (this.i == 3) {
                 this.i = 1;
             }
-            else{
+            else {
                 this.i++;
             }
         }
@@ -261,9 +256,10 @@ export default {
 };
 </script>
 <style>
-.title-product{
+.title-product {
     font-size: 30px;
 }
+
 .product-content {
     width: 100%;
     min-height: 2500px;
@@ -288,8 +284,8 @@ export default {
     margin-left: 5%;
     height: 300px;
     margin-bottom: 20px;
-    background-color: yellow;
-
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .img-1 {
@@ -299,9 +295,10 @@ export default {
 
 .img-content {
     width: 100%;
-    font-size: 15px;
+    font-size: 13px;
     padding: 0 3%;
     color: black;
+    height: 80px;
 }
 
 
@@ -313,7 +310,6 @@ export default {
     font-size: 15px;
     color: red;
     padding: 0 3%;
-    margin-top: 35px;
 }
 
 .prize-product {
@@ -334,5 +330,4 @@ export default {
     justify-content: center;
     color: #0f5b9a;
 }
-
 </style>
