@@ -16,8 +16,8 @@
             </NuxtLink>
         </div>
         <div class="table-responsive">
-            <table class="table">
-                <thead>
+            <table class="table table-bordered">
+                <thead style="background-color: #0f5b9a; color: white;">
                     <tr>
                         <th scope="col">Mã SP</th>
                         <th scope="col">Tên SP</th>
@@ -40,7 +40,7 @@
                             <div class="admin-producttype">{{ product.producttype }}</div>
                         </td>
                         <td>
-                            <div class="admin-product-price">{{ product.price }}</div>
+                            <div class="admin-product-price">{{ product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND',}) }}</div>
                         </td>
                         <td>
                             <img class="img-product-detail" style="width: 60px"
@@ -109,7 +109,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.admin-product-name{
+    
+}
+
 .add-product:hover {
     text-decoration: none;
 }

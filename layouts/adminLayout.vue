@@ -44,7 +44,7 @@
                         User
                     </div>
                 </NuxtLink>
-                <NuxtLink class="menu-item-admin" :to="{ name: 'adminProductManagement' }">
+                <NuxtLink class="menu-item-admin" :to="{ name: 'adminOrderManagement' }">
                     <div class="">
                         <font-awesome-icon icon="fa-solid fa-box" />
                     </div>

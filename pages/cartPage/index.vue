@@ -31,13 +31,13 @@
                         <img class="img-cart-detail" v-bind:src="'https://localhost:7029' + cartDetail.image" alt="">
                     </td>
                     <td>
-                        <div class="cart-detail-general">{{ cartDetail.price }}</div>
+                        <div class="cart-detail-general">{{ cartDetail.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND',}) }}</div>
                     </td>
                     <td>
                         <div class="cart-detail-general">{{ cartDetail.quantity }}</div>
                     </td>
                     <td>
-                        <div class="cart-detail-general">{{ cartDetail.quantity * cartDetail.price }}</div>
+                        <div class="cart-detail-general">{{ (cartDetail.quantity * cartDetail.price).toLocaleString('vi-VN', { style: 'currency', currency: 'VND',}) }}</div>
                     </td>
                     <td>
                         <div class="cart-detail-general">Xoá</div>
@@ -52,7 +52,7 @@
                 Tổng tiền:
             </div>
             <div>
-                {{ totalPrice.toLocaleString('en-US', { style: 'currency', currency: 'USD'})}}
+                {{ totalPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND',})}}
             </div>
         </div>
         <div class="pay">

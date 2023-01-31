@@ -12,29 +12,34 @@
             <table class="table table-bordered">
                 <thead style="background-color: #0f5b9a; color: white;">
                     <tr>
+                        <th scope="col">Mã Đơn Hàng</th>
                         <th scope="col">Mã Khách Hàng</th>
                         <th scope="col">Tên</th>
                         <th scope="col">Địa chỉ </th>
                         <th scope="col">Số Điện Thoại</th>
-                        <th scope="col">Email đăng nhập</th>
+                        <th scope="col">Số Lượng</th>
+                        <th scope="col">Tổng Tiền</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="(user, index) in userList">
+                    <tr v-for="(order, index) in orderList">
                         <td>
-                            <div class="admin-user-id">{{ user.id }}</div>
+                            {{ order.id}}
                         </td>
                         <td>
-                            <div class="admin-user-name">{{ user.name }}</div>
+                            {{ order.userId }}
                         </td>
                         <td>
-                            <div class="admin-user-address">{{ user.address }}</div>
+                            {{ order.name }}
                         </td>
                         <td>
-                            <div class="admin-user-phoneNumber">{{ user.phoneNumber }}</div>
+                            {{ order.address }}
                         </td>
                         <td>
-                            <div class="admin-user-username">{{ user.userName }}</div>
+                            {{ order.phoneNumber }}
+                        </td>
+                        <td>
+                            {{ order.quantity }}
                         </td>
                     </tr>
 
@@ -49,26 +54,26 @@ export default {
     layout: "adminLayout",
     async beforeMount() {
         this.currentPage = 1
-        this.getUserList()
+        this.getOrderList()
     },
     data() {
         return {
-            userList: [],
+            orderList: [],
             total: 0,
             totalPage: 0,
             currentPage: 0,
         };
     },
     methods: {
-        async getUserList() {
-            var response = await fetch('https://localhost:7029/api/User/GetUsers?limit=10&page=' + this.currentPage)
+        async getOrderList() {
+            var response = await fetch('https://localhost:7029/api/Order/GetOrders?limit=5&page=' + this.currentPage)
                 .then(res => {
                     return res.json()
                 })
-            this.userList = response.userList
+            this.orderList = response.orderList
             this.total = response.total
             this.totalPage = response.totalPage
-            console.log(JSON.stringify(this.userList))
+            console.log(JSON.stringify(this.orderList))
         },
         chooesPage(index) {
             if (this.currentPage != 0) {
@@ -78,7 +83,7 @@ export default {
             var element = document.getElementById("page-" + index);
             element.classList.add("page-item-choose");
             this.currentPage = index + 1
-            this.getUserList()
+            this.getOrderList()
         },
     },
 }

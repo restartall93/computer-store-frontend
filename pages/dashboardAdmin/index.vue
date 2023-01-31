@@ -6,7 +6,7 @@
                     <div class="statistical text-light rounded p-4 w-100 bg-primary">
                         <div class="d-flex w-100 justify-content-between">
                             <div class="h2">
-                                100
+                                {{totalUser}}
                             </div>
                             <div class="h2">
                                 <font-awesome-icon icon="fa-solid fa-users" />
@@ -21,7 +21,7 @@
                     <div class="statistical text-light rounded p-4 w-100 bg-success">
                         <div class="d-flex w-100 justify-content-between">
                             <div class="h2">
-                                1000
+                                {{totalProduct}}
                             </div>
                             <div class="h2">
                                 <font-awesome-icon icon="fa-solid fa-cubes" />
@@ -36,7 +36,7 @@
                     <div class="statistical text-light rounded p-4 w-100 bg-danger">
                         <div class="d-flex w-100 justify-content-between">
                             <div class="h2">
-                                1000
+                                {{totalOrder}}
                             </div>
                             <div class="h2">
                                 <font-awesome-icon icon="fa-solid fa-boxes-stacked" />
@@ -69,6 +69,29 @@
 <script>
 export default {
     layout: "adminLayout",
+    async beforeMount() {
+        this.getProductList()
+    },
+    data() {
+        return {
+            totalUser: 0,
+            totalOrder: 0,
+            totalProduct: 0,
+        };
+    },
+    methods: {
+        async getProductList() {
+
+            var response = await fetch('https://localhost:7029/api/Static/Dashboard')
+                .then(res => {
+                    return res.json()
+                })
+            this.totalUser = response.totalUser
+            this.totalOrder = response.totalOrder
+            this.totalProduct = response.totalProduct
+            console.log(JSON.stringify(response))
+        },
+    }
 }
 </script>
 <style>
