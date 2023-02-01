@@ -9,13 +9,7 @@
         <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Computer'} }">
             <font-awesome-icon icon="fa-solid fa-computer" />
             <div class="menu-item-content">
-                pc đồ hoạ - làm việc
-            </div>
-        </NuxtLink>
-        <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Computer'} }">
-            <font-awesome-icon icon="fa-solid fa-computer" />
-            <div class="menu-item-content">
-                pc gaming
+                pc gaming - làm việc
             </div>
         </NuxtLink>
         <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'CPU'} }">

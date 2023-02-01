@@ -71,7 +71,7 @@
                 </div>
             </div>
             <div class="title-product">
-                pc đồ hoạ - làm việc
+                pc gaming - làm việc
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in computerList">

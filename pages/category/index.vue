@@ -55,7 +55,7 @@ export default {
     }
 };
 </script>
-<style scoped>
+<style>
 .title-product-category {
     font-size: 25px;
     color: #0f5b9a;
@@ -67,6 +67,7 @@ export default {
     padding: 0 3%;
     color: black;
     height: 80px;
+    font-weight: bold;
 }
 
 .prize-product{
@@ -77,6 +78,7 @@ export default {
 
 .status-product{
     font-size: 15px;
-    margin-top: 4px
+    color: red;
+    padding: 0 3%;
 }
 </style>
