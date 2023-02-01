@@ -24,7 +24,9 @@
                         </div>
                         <div class="btn-admin-login-container control-item">
                             <button class="btn-login" type="submit">
-                                Đăng Nhập
+                                <div class="text-login-admin">
+                                    Đăng Nhập
+                                </div>
                             </button>
                         </div>
                     </div>
@@ -131,7 +133,12 @@ export default {
 }
 
 .btn-login {
-    color: white;
+    border: none;
     text-transform: upercase;
+    background-color: #007be3;
+}
+
+.text-login-admin{
+    color: white;
 }
 </style>

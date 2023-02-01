@@ -34,7 +34,7 @@
             </div> -->
             <div class="slide-container px-5">
                 <img v-if="i == 1" class="w-100 h-100" src='../../assets/img/slide_1.jpg'>
-                <img v-if="i == 2" class="w-100 h-100" src='../../assets/img/slide_2.png'>
+                <img v-if="i == 2" class="w-100 h-100" src='../../assets/img/slide_2.jpg'>
                 <img v-if="i == 3" class="w-100 h-100" src='../../assets/img/slide_3.jpg'>
                 <div class="fixed-bottom">
                     <div>a</div>
