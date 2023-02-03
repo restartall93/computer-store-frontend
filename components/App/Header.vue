@@ -1,56 +1,61 @@
 <template>
     <div>
         <div id="home-page-contact">
-            <div class="home-page-contact-container">
-                <div class="contact-container contact-child">
-                    <a class="contact-details">
-                        <font-awesome-icon icon="fa-solid fa-location-dot" />
-                        Hệ thống showroom
-                    </a>
-            
+            <div class="row w-100">
+                <div class=" home-page-contact-container col-md-12 col-lg-6 col-xl-9 d-flex">
                     <div class="">
-                        <div id="xmas-popup" class="popup" href="#">
-                            <div class="popup-content">
-                                fwefweffffew
-                                fewjfhuewifh
-                                fwefh
-                                <a href="#" class="close">x</a>
+                        <div class="contact-container contact-child d-flex">
+                            <a class="contact-details">
+                                <font-awesome-icon icon="fa-solid fa-location-dot" />
+                                Hệ thống showroom
+                            </a>
+
+                            <div class="">
+                                <div id="xmas-popup" class="popup" href="#">
+                                    <div class="popup-content">
+                                        fwefweffffew
+                                        fewjfhuewifh
+                                        fwefh
+                                        <a href="#" class="close">x</a>
+                                    </div>
+                                </div>
+                                <div class="contact-details">
+                                    <a href="#xmas-popup" class="contact-details-button">
+                                        <font-awesome-icon icon="fa-solid fa-headset" />
+                                        Khách Cá Nhân
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contact-details">
-                            <a href="#xmas-popup" class="contact-details-button">
+
+                            <a class="contact-details">
                                 <font-awesome-icon icon="fa-solid fa-headset" />
-                                Khách Cá Nhân
+                                Khách Doanh Nghiệp
+                            </a>
+                            <a class="contact-details">
+                                <font-awesome-icon icon="fa-solid fa-newspaper" />
+                                Tin Công Nghệ
+                            </a>
+                            <a class="contact-details">
+                                <font-awesome-icon icon="fa-solid fa-bullhorn" />
+                                Tuyển Dụng
                             </a>
                         </div>
                     </div>
-
-                    <a class="contact-details">
-                        <font-awesome-icon icon="fa-solid fa-headset" />
-                        Khách Doanh Nghiệp
-                    </a>
-                    <a class="contact-details">
-                        <font-awesome-icon icon="fa-solid fa-newspaper" />
-                        Tin Công Nghệ
-                    </a>
-                    <a class="contact-details">
-                        <font-awesome-icon icon="fa-solid fa-bullhorn" />
-                        Tuyển Dụng
-                    </a>
                 </div>
-
-                <div v-if=isLogin class="authen-container contact-child">
-                    <div class="authen-icon">
-                        <font-awesome-icon icon="fa-solid fa-user" />
+                <div class="authen-container col-md-12 col-lg-6 col-xl-3 d-flex justify-content-end">
+                    <div v-if=isLogin class="contact-child">
+                        <div class="authen-icon">
+                            <font-awesome-icon icon="fa-solid fa-user" />
+                        </div>
+                        <div class="btn-dang-nhap" @click="logout()">Đăng Xuất</div>
                     </div>
-                    <div class="btn-dang-nhap" @click="logout()">Đăng Xuất</div>
-                </div>
-                <div v-else class="authen-container contact-child">
-                    <div class="authen-icon">
-                        <font-awesome-icon icon="fa-solid fa-user" />
+                    <div v-else class="contact-child d-flex">
+                        <div class="authen-icon ">
+                            <font-awesome-icon icon="fa-solid fa-user" />
+                        </div>
+                            <NuxtLink class="btn-dang-nhap" :to="{ name: 'userLoginPage' }">Đăng Nhập</NuxtLink>/
+                            <NuxtLink class="btn-dang-nhap" :to="{ name: 'userRegisterPage' }">Đăng Ký</NuxtLink>
                     </div>
-                    <NuxtLink class="btn-dang-nhap" :to="{ name: 'userLoginPage' }">Đăng Nhập</NuxtLink>/
-                    <NuxtLink class="btn-dang-nhap" :to="{ name: 'userRegisterPage' }">Đăng Ký</NuxtLink>
                 </div>
             </div>
         </div>
@@ -77,7 +82,8 @@
                             <font-awesome-icon icon="fa-solid fa-computer" />
                         </div>
                         <div class="Build-PC-content cart-content">
-                            <NuxtLink class="btn-cart-content" :to="{ name: 'buildPcPage' }">Xây dựng cấu hình</NuxtLink>
+                            <NuxtLink class="btn-cart-content" :to="{ name: 'buildPcPage' }">Xây dựng cấu hình
+                            </NuxtLink>
                         </div>
                     </div>
                     <div @click="cartOnClick()" class="cart-container">
@@ -94,7 +100,7 @@
         </div>
     </div>
 </template>
-  
+
 <script>
 export default {
     components: {
@@ -146,45 +152,43 @@ export default {
 }
 
 #home-page-contact {
-    width: 100%;
-    height: 46px;
+    width: 100%;  
     background: #0f5b9a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
+
 
 .home-page-contact-container {
-    height: 100%;
-    width: 80%;
-    display: flex;
+    height: 80px;
+    width: 100%;
+    padding: 0 0 0 8%;
     align-items: center;
-    justify-content: space-between;
+
 }
 
-.contact-child {
+/* .contact-child {
     height: 100%;
     display: flex;
     align-items: center;
-}
+} */
 
-.contact-container {
+/* .contact-container {
     width: 80%;
     justify-content: left;
-}
+} */
 
 .authen-container {
-    width: 20%;
-    justify-content: right;
+    width: 100%;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
+    align-items: center;
+    padding: 0 10% 0 0;
 }
 
 .contact-details {
     background: #0C3175;
     margin-right: 10px;
     color: white;
-    font-size: 14px;
+    font-size: 15px;
     padding: 8px 15px;
     border-radius: 15px;
     border: #0C3175;
@@ -291,6 +295,7 @@ export default {
     align-items: center;
     color: #0f5b9a;
 }
+
 .icon-cart-container:hover {
     cursor: pointer;
 }
@@ -300,8 +305,8 @@ export default {
     height: 30px;
     margin-top: 4px;
     /* display: flex;
-    justify-content: center;
-    align-items: center; */
+  justify-content: center;
+  align-items: center; */
     text-align: center;
     font-weight: bold;
     color: black;
@@ -388,8 +393,7 @@ export default {
     display: block;
 }
 
-.Build-PC-content{
+.Build-PC-content {
     margin-top: 4px;
 }
 </style>
-  

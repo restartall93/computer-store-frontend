@@ -50,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-container-2">             
+            <div class="footer-container-2">
                 <div class="footer-content-1">
                     <div class="footer-container-2-content-1 ">
                         GIỚI THIỆU BIN PC
@@ -166,236 +166,246 @@
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <div class="footer-container-3">
+            <div class="footer-container-3 mt-3">
                 <div class="footer-showroom-title">
                     HỆ THỐNG CÁC SHOWROOM CỦA BINPC
                     <div class="line-footer-1"></div>
                 </div>
             </div>
             <div class="footer-container-4">
-                <div class="footer-showroom-list">
-                    <div class="showroom-list-content">
-                        <div class="number-showroom">
-                            1
-                        </div>
-                        <div class="name-showroom">
-                            SHOWROOM - HOÀN KIẾM
-                        </div>
-                    </div>
-                    <iframe class="map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29792.451014425995!2d105.83741239506773!3d21.030430111017512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac69f861af3f%3A0x331250d72cd2fa28!2zSOG7kyBHxrDGoW0!5e0!3m2!1svi!2s!4v1668709964760!5m2!1svi!2s"
-                        width="317" height="309" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="footer-list-contact">
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-location-dot" />
+                <div class="row w-100">
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <div class="footer-showroom-list">
+                            <div class="showroom-list-content">
+                                <div class="number-showroom">
+                                    1
+                                </div>
+                                <div class="name-showroom">
+                                    SHOWROOM - HOÀN KIẾM
+                                </div>
                             </div>
-                            <div class="txt-contact">
-                                Hoàn Kiếm, Hà Nội
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                <div class="btn-txt-contact">
-                                    Bấm gọi tư vấn bán hàng
+                            <iframe class="map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29792.451014425995!2d105.83741239506773!3d21.030430111017512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac69f861af3f%3A0x331250d72cd2fa28!2zSOG7kyBHxrDGoW0!5e0!3m2!1svi!2s!4v1668709964760!5m2!1svi!2s"
+                                width="317" height="309" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="footer-list-contact">
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-location-dot" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Hoàn Kiếm, Hà Nội
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        <div class="btn-txt-contact">
+                                            Bấm gọi tư vấn bán hàng
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Tư vấn Gaming Gear
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Tư vấn Laptop
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Hỗ trợ kĩ thuật
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-envelope" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Email:
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                Tư vấn Gaming Gear
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                Tư vấn Laptop
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                Hỗ trợ kĩ thuật
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-envelope" />
-                            </div>
-                            <div class="txt-contact">
-                                Email:
-                            </div>
-                        </div>
                     </div>
-                </div>
-                <div class="footer-showroom-list">
-                    <div class="showroom-list-content">
-                        <div class="number-showroom">
-                            2
-                        </div>
-                        <div class="name-showroom">
-                            SHOWROOM - CẦU GIẤY
-                        </div>
-                    </div>
-                    <iframe class="map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1862.0372108051492!2d105.80128272729587!3d21.02970800775431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab50f3255941%3A0x548dcdce546f3c21!2zQ-G6p3UgR2nhuqV5!5e0!3m2!1svi!2s!4v1668751080859!5m2!1svi!2s"
-                        width="317" height="309" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="footer-list-contact">
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-location-dot" />
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <div class="footer-showroom-list">
+                            <div class="showroom-list-content">
+                                <div class="number-showroom">
+                                    2
+                                </div>
+                                <div class="name-showroom">
+                                    SHOWROOM - CẦU GIẤY
+                                </div>
                             </div>
-                            <div class="txt-contact">
-                                Cầu Giấy, Hà Nội
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                <div class="btn-txt-contact">
-                                    Bấm gọi tư vấn bán hàng
+                            <iframe class="map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1862.0372108051492!2d105.80128272729587!3d21.02970800775431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab50f3255941%3A0x548dcdce546f3c21!2zQ-G6p3UgR2nhuqV5!5e0!3m2!1svi!2s!4v1668751080859!5m2!1svi!2s"
+                                width="317" height="309" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="footer-list-contact">
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-location-dot" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Cầu Giấy, Hà Nội
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        <div class="btn-txt-contact">
+                                            Bấm gọi tư vấn bán hàng
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Tư vấn Gaming Gear
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Tư vấn Laptop
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Hỗ trợ kĩ thuật
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-envelope" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Email:
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                Tư vấn Gaming Gear
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                Tư vấn Laptop
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                Hỗ trợ kĩ thuật
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-envelope" />
-                            </div>
-                            <div class="txt-contact">
-                                Email:
-                            </div>
-                        </div>
                     </div>
-                </div>
-                <div class="footer-showroom-list">
-                    <div class="showroom-list-content">
-                        <div class="number-showroom">
-                            3
-                        </div>
-                        <div class="name-showroom">
-                            SHOWROOM - HỒ TÂY
-                        </div>
-                    </div>
-                    <iframe class="map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35422.56118941289!2d105.80272325462681!3d21.059154747712864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aafe7260066b%3A0x4c2c988309aaa3db!2zSOG7kyBUw6J5!5e0!3m2!1svi!2s!4v1668750970894!5m2!1svi!2s"
-                        width="317" height="309" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="footer-list-contact">
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-location-dot" />
-                            </div>
-                            <div class="txt-contact">
-                                Hồ Tây, Hà Nội
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                <div class="btn-txt-contact">
-                                    Bấm gọi tư vấn bán hàng
+
+                    <div class="col-md-12 col-lg-6 col-xl-4">
+                        <div class="footer-showroom-list">
+                            <div class="showroom-list-content">
+                                <div class="number-showroom">
+                                    3
+                                </div>
+                                <div class="name-showroom">
+                                    SHOWROOM - HỒ TÂY
                                 </div>
                             </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                Tư vấn Gaming Gear
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                Tư vấn Laptop
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-phone-flip" />
-                            </div>
-                            <div class="txt-contact">
-                                Hỗ trợ kĩ thuật
-                            </div>
-                        </div>
-                        <div class="icon-footer-list-contact">
-                            <div class="icon-txt">
-                                <font-awesome-icon icon="fa-solid fa-envelope" />
-                            </div>
-                            <div class="txt-contact">
-                                Email:
+                            <iframe class="map"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35422.56118941289!2d105.80272325462681!3d21.059154747712864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aafe7260066b%3A0x4c2c988309aaa3db!2zSOG7kyBUw6J5!5e0!3m2!1svi!2s!4v1668750970894!5m2!1svi!2s"
+                                width="317" height="309" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div class="footer-list-contact">
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-location-dot" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Hồ Tây, Hà Nội
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        <div class="btn-txt-contact">
+                                            Bấm gọi tư vấn bán hàng
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Tư vấn Gaming Gear
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Tư vấn Laptop
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-phone-flip" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Hỗ trợ kĩ thuật
+                                    </div>
+                                </div>
+                                <div class="icon-footer-list-contact">
+                                    <div class="icon-txt">
+                                        <font-awesome-icon icon="fa-solid fa-envelope" />
+                                    </div>
+                                    <div class="txt-contact">
+                                        Email:
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <div class="contact-container-5">
-                <div class="contact-info">
-                    <div class="contact-info-1"></div>
-                    WEBSITE ĐƯỢC SỞ HỮU VÀ QUẢN LÝ BỞI BIN
-                    <div class="contact-info-2">
-                        CÔNG TY TNHH MÁY TÍNH BIN PC
-                    </div>
-                    <div class="contact-info-all-3">
-                        <div class="contact-info-3">
-                            Địa Chỉ: Số 377-379 Trương Định, tổ 41 - Phường Tương Mai - Quận Hoàng Mai - Hà Nội.
-                        </div>
-                        <div class="contact-info-3">
-                            Mã số thuế: 0107568451 do Sở Kế Hoạch và Đầu Tư TP.Hà Nội (22/12/2015)
-                        </div>
-                        <div class="contact-info-3">
-                            Mua hàng: 0989336366
-                        </div>
-                        <div class="contact-info-3">
-                            GÓP Ý : 0978131113 - 0971113333. Email: info@nguyencongpc.vn. Website: nguyencongpc.vn.
-                            Fanpage: www.facebook.com/MAY.TINH.NGUYEN.CONG
+            <div class="contact-container-5 mt-3">
+                <div class="row w-100">
+                    <div class=" col-md-12 col-lg-6 col-xl-12 d-flex">
+                        <div class="contact-info">
+                            <div class="contact-info-1"></div>
+                            WEBSITE ĐƯỢC SỞ HỮU VÀ QUẢN LÝ BỞI BIN
+                            <div class="contact-info-2">
+                                CÔNG TY TNHH MÁY TÍNH BIN PC
+                            </div>
+                            <div class="contact-info-all-3">
+                                <div class="contact-info-3">
+                                    Địa Chỉ: Số 377-379 Trương Định, tổ 41 - Phường Tương Mai - Quận Hoàng Mai - Hà Nội.
+                                </div>
+                                <div class="contact-info-3">
+                                    Mã số thuế: 0107568451 do Sở Kế Hoạch và Đầu Tư TP.Hà Nội (22/12/2015)
+                                </div>
+                                <div class="contact-info-3">
+                                    Mua hàng: 0989336366
+                                </div>
+                                <div class="contact-info-3">
+                                    GÓP Ý : 0978131113 - 0971113333. Email: info@nguyencongpc.vn. Website:
+                                    nguyencongpc.vn.
+                                    Fanpage: www.facebook.com/MAY.TINH.NGUYEN.CONG
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -542,8 +552,9 @@ export default {
 }
 
 .footer-showroom-list {
-    width: 28%;
+    width: 100%;
     height: 100%;
+    margin-left: 5%;
 }
 
 .showroom-list-content {
