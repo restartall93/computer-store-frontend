@@ -41,6 +41,9 @@
                         <td>
                             {{ order.quantity }}
                         </td>
+                        <td>
+                            {{ order.totalPrice }}
+                        </td>
                     </tr>
 
                 </tbody>

@@ -166,7 +166,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-container-3 mt-3">
+            <div id="he-thong" class="footer-container-3 mt-3">
                 <div class="footer-showroom-title">
                     HỆ THỐNG CÁC SHOWROOM CỦA BINPC
                     <div class="line-footer-1"></div>
@@ -474,7 +474,6 @@ export default {
 
 .footer-content-1 {
     width: 20%;
-    height: 100%;
 }
 
 .footer-container-2-content-1 {
@@ -613,7 +612,7 @@ export default {
 
 .contact-container-5 {
     width: 100%;
-    height: 159px;
+    min-height: 159px;
     padding: 0 10.3%;
 }
 

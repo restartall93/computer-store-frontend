@@ -6,7 +6,7 @@
                     <div class="statistical text-light rounded p-4 w-100 bg-primary">
                         <div class="d-flex w-100 justify-content-between">
                             <div class="h2">
-                                {{totalUser}}
+                                {{ totalUser }}
                             </div>
                             <div class="h2">
                                 <font-awesome-icon icon="fa-solid fa-users" />
@@ -21,7 +21,7 @@
                     <div class="statistical text-light rounded p-4 w-100 bg-success">
                         <div class="d-flex w-100 justify-content-between">
                             <div class="h2">
-                                {{totalProduct}}
+                                {{ totalProduct }}
                             </div>
                             <div class="h2">
                                 <font-awesome-icon icon="fa-solid fa-cubes" />
@@ -36,7 +36,7 @@
                     <div class="statistical text-light rounded p-4 w-100 bg-danger">
                         <div class="d-flex w-100 justify-content-between">
                             <div class="h2">
-                                {{totalOrder}}
+                                {{ totalOrder }}
                             </div>
                             <div class="h2">
                                 <font-awesome-icon icon="fa-solid fa-boxes-stacked" />
@@ -51,7 +51,7 @@
                     <div class="statistical text-light rounded p-4 w-100 bg-warning">
                         <div class="d-flex w-100 justify-content-between">
                             <div class="h2">
-                                1000
+                                {{totalProductSold}}
                             </div>
                             <div class="h2">
                                 <font-awesome-icon icon="fa-solid fa-cubes-stacked" />
@@ -77,6 +77,7 @@ export default {
             totalUser: 0,
             totalOrder: 0,
             totalProduct: 0,
+            totalProductSold: 0,
         };
     },
     methods: {
@@ -89,6 +90,7 @@ export default {
             this.totalUser = response.totalUser
             this.totalOrder = response.totalOrder
             this.totalProduct = response.totalProduct
+            this.totalProductSold= response.totalProductSold
             console.log(JSON.stringify(response))
         },
     }

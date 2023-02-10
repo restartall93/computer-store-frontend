@@ -36,10 +36,10 @@
                 <img v-if="i == 1" class="w-100 h-100" src='../../assets/img/slide_1.jpg'>
                 <img v-if="i == 2" class="w-100 h-100" src='../../assets/img/slide_2.jpg'>
                 <img v-if="i == 3" class="w-100 h-100" src='../../assets/img/slide_3.jpg'>
-                <div class="fixed-bottom">
-                    <!-- <div>a</div>
-                    <div>a</div>
-                    <div>a</div> -->
+                <div class="button-list-slide">
+                    <div @click="pickSlide(1)" id="button-slide-1" class="button-slide"></div>
+                    <div @click="pickSlide(2)" id="button-slide-2" class="button-slide"></div>
+                    <div @click="pickSlide(3)" id="button-slide-3" class="button-slide"></div>
                 </div>
             </div>
         </div>
@@ -61,8 +61,8 @@
                             Liên hệ
                         </div>
                         <div class="prize-product">
-                            {{ product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND',}) }}
-                            <div class="icon-cast-product">
+                            {{ product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND', }) }}
+                            <div @click="addToCartOnclick(product.id)" class="icon-cast-product">
                                 <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                             </div>
                         </div>
@@ -220,7 +220,6 @@ export default {
                 return res.json()
             })
         this.computerList = responseComputer
-        setInterval(this.myTimer, 3000)
 
         // get cpu list
         var responseCPU = await fetch('https://localhost:7029/api/Product/GetProductListByCategory?productType=CPU')
@@ -228,6 +227,8 @@ export default {
                 return res.json()
             })
         this.cpuList = responseCPU
+        var elementA = document.getElementById("button-slide-1");
+        elementA.classList.add("button-slide-active");
         setInterval(this.myTimer, 3000)
     },
 
@@ -245,10 +246,55 @@ export default {
     methods: {
         myTimer() {
             if (this.i == 3) {
+                this.changeColor(1)
                 this.i = 1;
             }
             else {
+                this.changeColor(this.i + 1)
                 this.i++;
+            }
+        },
+
+        pickSlide(value) {
+            this.changeColor(value)
+            this.i = value
+        },
+
+        changeColor(value) {
+            var elementR = document.getElementById("button-slide-" + (this.i));
+            elementR.classList.remove("button-slide-active");
+            var elementA = document.getElementById("button-slide-" + value);
+            elementA.classList.add("button-slide-active");
+        },
+
+        async addToCartOnclick(productId) {
+            if (confirm('Bạn có muốn thêm sản phẩm vào giỏ hàng?')) {
+                var user = JSON.parse(localStorage.getItem('user'))
+                if (user) {
+                    var addToCartRequest = {
+                        productId: productId,
+                        userId: user.id
+                    }
+                    var repsonseAddToCart = await fetch('https://localhost:7029/api/ProductHandle/AddToCart',
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(addToCartRequest)
+                        }
+                    ).then((res) => res.json())
+                    if (repsonseAddToCart.id != 0) {
+                        alert("Thêm thành công")
+                        this.$router.push("/cartPage")
+                    }
+                }
+                else {
+                    alert('BẠN CẦN ĐĂNG NHẬP!')
+                    return
+                }
+            } else {
+                alert('Đã huỷ thêm vào giỏ hàng!');
             }
         }
     },
@@ -261,7 +307,7 @@ export default {
 
 .product-content {
     width: 100%;
-    min-height: 2500px;
+    min-height: 2200px;
     padding: 0 7%;
     font-size: 20px;
     font-weight: bold;
@@ -328,5 +374,27 @@ export default {
     align-items: center;
     justify-content: center;
     color: #0f5b9a;
+    cursor: pointer;
+}
+
+.button-list-slide {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 20px;
+    align-items: center;
+}
+
+.button-slide {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.button-slide-active {
+    background-color: red;
 }
 </style>

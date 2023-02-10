@@ -6,9 +6,9 @@
             <div class="logo-admin-container">
                 <img class="logo-admin" src="../assets/img/logo.png" alt="">
             </div>
-            <div class="icon-home-page-admin">
+            <NuxtLink :to="{ name: 'dashboardAdmin' }" class="icon-home-page-admin">
                 <font-awesome-icon icon="fa-solid fa-house" />
-            </div>
+            </NuxtLink>
             <div class="text-light d-flex align-items-center">
                 Hello, {{ adminName }}
                 <div class="ml-1">

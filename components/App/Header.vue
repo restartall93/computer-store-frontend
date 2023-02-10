@@ -2,15 +2,17 @@
     <div>
         <div id="home-page-contact">
             <div class="row w-100">
-                <div class=" home-page-contact-container col-md-12 col-lg-6 col-xl-9 d-flex">
+                <div class=" home-page-contact-container col-9 col-md-9 col-lg-9 col-xl-9 d-flex">
                     <div class="">
                         <div class="contact-container contact-child d-flex">
-                            <a class="contact-details">
+                            <a class="contact-details d-flex align-items-center" href="#he-thong">
                                 <font-awesome-icon icon="fa-solid fa-location-dot" />
-                                Hệ thống showroom
+                                <div class="d-none d-md-none d-lg-block ml-1">
+                                    Hệ thống showroom
+                                </div>
                             </a>
 
-                            <div class="">
+                            <!-- <div class="">
                                 <div id="xmas-popup" class="popup" href="#">
                                     <div class="popup-content">
                                         fwefweffffew
@@ -20,41 +22,57 @@
                                     </div>
                                 </div>
                                 <div class="contact-details">
-                                    <a href="#xmas-popup" class="contact-details-button">
+                                    <a href="#xmas-popup" class="contact-details-button d-flex align-items-center">
                                         <font-awesome-icon icon="fa-solid fa-headset" />
-                                        Khách Cá Nhân
+                                        <div class="d-none d-md-none d-lg-block ml-1">
+                                            Khách Cá Nhân
+                                        </div>
                                     </a>
                                 </div>
-                            </div>
+                            </div> -->
 
-                            <a class="contact-details">
+                            <a href="#xmas-popup" class="contact-details d-flex align-items-center">
                                 <font-awesome-icon icon="fa-solid fa-headset" />
-                                Khách Doanh Nghiệp
+                                <div class="d-none d-md-none d-lg-block ml-1">
+                                    Khách Cá Nhân
+                                </div>
                             </a>
-                            <a class="contact-details">
+
+
+                            <a class="contact-details d-flex align-items-center">
+                                <font-awesome-icon icon="fa-solid fa-headset" />
+                                <div class="d-none d-md-none d-lg-block ml-1">
+                                    Khách Doanh Nghiệp
+                                </div>
+                            </a>
+                            <a class="contact-details d-flex align-items-center">
                                 <font-awesome-icon icon="fa-solid fa-newspaper" />
-                                Tin Công Nghệ
+                                <div class="d-none d-md-none d-lg-block ml-1">
+                                    Tin Công Nghệ
+                                </div>
                             </a>
-                            <a class="contact-details">
+                            <a class="contact-details d-flex align-items-center">
                                 <font-awesome-icon icon="fa-solid fa-bullhorn" />
-                                Tuyển Dụng
+                                <div class="d-none d-md-none d-lg-block ml-1">
+                                    Tuyển Dụng
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="authen-container col-md-12 col-lg-6 col-xl-3 d-flex justify-content-end">
-                    <div v-if=isLogin class="contact-child">
+                <div class="authen-container col-3 col-md-3 col-lg-3 col-xl-3 d-flex justify-content-end">
+                    <div v-if=isLogin class="contact-child d-flex align-items-center">
                         <div class="authen-icon">
                             <font-awesome-icon icon="fa-solid fa-user" />
                         </div>
                         <div class="btn-dang-nhap" @click="logout()">Đăng Xuất</div>
                     </div>
-                    <div v-else class="contact-child d-flex">
+                    <div v-else class="contact-child d-flex align-items-center">
                         <div class="authen-icon ">
                             <font-awesome-icon icon="fa-solid fa-user" />
                         </div>
-                            <NuxtLink class="btn-dang-nhap" :to="{ name: 'userLoginPage' }">Đăng Nhập</NuxtLink>/
-                            <NuxtLink class="btn-dang-nhap" :to="{ name: 'userRegisterPage' }">Đăng Ký</NuxtLink>
+                        <NuxtLink class="btn-dang-nhap" :to="{ name: 'userLoginPage' }">Đăng Nhập</NuxtLink>/
+                        <NuxtLink class="btn-dang-nhap" :to="{ name: 'userRegisterPage' }">Đăng Ký</NuxtLink>
                     </div>
                 </div>
             </div>
@@ -70,10 +88,11 @@
                 <div class="homepage-header-search">
                     <div class="header-search-container">
                         <input class="input-search" type="text"
-                            placeholder="Nhập tên sản phẩm, từ khoá cần tìm kiếm ...">
-                        <div class="button-search">
+                            placeholder="Nhập tên sản phẩm, từ khoá cần tìm kiếm ..." v-model="keySearch">
+                        <NuxtLink class="button-search"
+                            :to="{ name: 'resultSearch', query: { 'keySearch': keySearch } }">
                             <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
-                        </div>
+                        </NuxtLink>
                     </div>
                 </div>
                 <div class="homepage-header-more">
@@ -91,7 +110,7 @@
                             <div class="icon-cart-container">
                                 <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                             </div>
-                            <div class="num-cart">23</div>
+                            <div v-if="isLogin" class="num-cart">{{ numberCartDetail }}</div>
                         </div>
                         <div class="btn-cart-content">Giỏ hàng</div>
                     </div>
@@ -106,23 +125,30 @@ export default {
     components: {
     },
     async beforeMount() {
-        var result = this.checkLogin()
-        this.isLogin = result
+        this.checkLogin()
     },
     data() {
         return {
             isLogin: false,
+            keySearch: '',
+            cartDetailList: [],
+            numberCartDetail: 0
         };
     },
 
     methods: {
-        checkLogin() {
+        async checkLogin() {
             var user = JSON.parse(localStorage.getItem('user'))
             if (user) {
-                return true;
+                var response = await fetch('https://localhost:7029/api/ProductHandle/GetCartDetailList?userID=' + user.id)
+                    .then(res => {
+                        return res.json()
+                    })
+                this.numberCartDetail = response.length
+                this.isLogin = true
             }
             else {
-                return false;
+                this.isLogin = false
             }
         },
         logout() {
@@ -152,7 +178,7 @@ export default {
 }
 
 #home-page-contact {
-    width: 100%;  
+    width: 100%;
     background: #0f5b9a;
 }
 
@@ -177,11 +203,16 @@ export default {
 } */
 
 .authen-container {
-    width: 100%;
     color: white;
     font-size: 16px;
     align-items: center;
-    padding: 0 10% 0 0;
+    padding-right: 8%;
+}
+
+@media screen and (max-width: 500px) {
+    .authen-container {
+        padding: 0;
+    }
 }
 
 .contact-details {
@@ -192,6 +223,7 @@ export default {
     padding: 8px 15px;
     border-radius: 15px;
     border: #0C3175;
+    height: 40px;
 }
 
 .contact-details:hover {
@@ -343,11 +375,6 @@ export default {
     margin: 10% auto;
     text-align: center;
     line-height: 2em;
-}
-
-.contact-details-button {
-    border: 1px solid #0C3175;
-    color: white;
 }
 
 .contact-details-button:hover {
