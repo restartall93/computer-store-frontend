@@ -16,7 +16,7 @@
                         Liên hệ
                     </div>
                     <div class="prize-product">
-                        {{ product.price }}
+                        {{ product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND', }) }}
                         <div class="icon-cast-product">
                             <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                         </div>

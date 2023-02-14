@@ -58,7 +58,7 @@
                                 Giá bán:
                             </div>
                             <div class="money-buy-product">
-                                {{ product.price }}
+                                {{ priceByFormat}} 
                             </div>
                         </div>
                         <div class:="repost-product">
@@ -113,11 +113,11 @@
                             RTX3050Ti 4Gb/ Win11)
                         </div>
                         <div class="des-content">
-                            
+                            {{ product.description }}
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-5 col-xl-5">
+                <!-- <div class="col-md-12 col-lg-5 col-xl-5">
                     <div class="test-2">
                         <div class="box-spec">
                             <div class="title-box">
@@ -221,7 +221,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -231,12 +231,13 @@
 export default {
     async beforeMount() {
         this.productId = this.$route.query.productId
-        this.init()
+        await this.init()
     },
     data() {
         return {
             product: {},
             productId: 0,
+            priceByFormat: '0'
         }
     },
 
@@ -245,6 +246,7 @@ export default {
             var response = await fetch('https://localhost:7029/api/Product/GetDetail?id=' + this.productId)
                 .then((res) => res.json())
             this.product = response
+            this.priceByFormat = this.product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND', })
         },
 
         async addToCart() {
