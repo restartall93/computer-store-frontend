@@ -9,7 +9,7 @@
                     </div>
                 </div>
             </div>
-            <NuxtLink class="add-product d-flex mr-3 text-light p-3 bg-primary "
+            <NuxtLink class="add-product d-flex mr-3 text-light p-3 "
                 :to="{ path: 'adminProduct/CreateEditProduct', query: { 'productId': 0 } }">
                 <div class=""><font-awesome-icon icon="fa-solid fa-plus" /> </div>
                 <div class="add-product-content ml-2">Thêm SP</div>
@@ -112,6 +112,9 @@ export default {
 <style scoped>
 .admin-product-name{
     
+}
+.add-product{
+    background-color: #0f5b9a;
 }
 
 .add-product:hover {

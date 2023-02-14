@@ -88,8 +88,8 @@
                     </div>
                 </div>
             </div>
-            <div class="w-100 d-flex justify-content-center mt-5">
-                <button type="submit" class="btn btn-primary">Primary</button>
+            <div class="w-100 d-flex justify-content-center mt-4">
+                <button type="submit" class="btn btn-primary">Thêm Mới</button>
             </div>
         </form>
     </div>
