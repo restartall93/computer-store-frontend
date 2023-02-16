@@ -106,12 +106,12 @@
                 <div class="col-md-12 col-lg-7 col-xl-7">
                     <div class="test-1">
                         <div class="title-detail-des">
-                            Đặc Điểm VIDEO BÌNH LUẬN
+                            Đặc Điểm 
                         </div>
-                        <div class="title">
+                        <!-- <div class="title">
                             Giới thiệu Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/
                             RTX3050Ti 4Gb/ Win11)
-                        </div>
+                        </div> -->
                         <div class="des-content">
                             {{ product.description }}
                         </div>

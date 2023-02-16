@@ -39,7 +39,7 @@
                                 {{ totalOrder }}
                             </div>
                             <div class="h2">
-                                <font-awesome-icon icon="fa-solid fa-boxes-stacked" />
+                                <font-awesome-icon icon="fa-solid fa-receipt" />
                             </div>
                         </div>
                         <div class="mt-5 text-uppercase">

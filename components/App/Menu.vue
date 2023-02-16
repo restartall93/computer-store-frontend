@@ -1,5 +1,5 @@
 <template>
-    <div class="menu-left">
+    <div class="menu-left mt-2">
         <NuxtLink class="menu-item" :to="{ name: 'category', query: {'productType': 'Lap-top'} }">
             <font-awesome-icon icon="fa-solid fa-laptop icon-menu" />
             <div class="menu-item-content">
