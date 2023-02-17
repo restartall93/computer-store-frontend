@@ -12,13 +12,13 @@
                 </div>
                 <div class="col-md-12 col-lg-7 col-xl-7">
                     <div class="product-information">
-                        <div class="product-general">
+                        <div class="product-general text-uppercase">
                             Thông số sản phẩm
                         </div>
                         <div v-if="product.cpu != 'none'" class="product-details-content">
                             <li>CPU: {{ product.cpu }}</li>
                         </div>
-                        <div class="product-details-content">
+                        <div v-if="product.ram != 'none'" class="product-details-content">
                             <li>RAM: {{ product.ram }}</li>
                         </div>
                         <div class="product-details-content">
@@ -316,7 +316,7 @@ export default {
 }
 
 .product-details-content {
-    font-size: 15px;
+    font-size: 17px;
     margin-left: 10px;
 }
 

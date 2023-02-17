@@ -53,8 +53,7 @@
                             <div class="label-control">
                                 Drive
                             </div>
-                            <input type="text" class="form-control" placeholder="Drive" v-model="product.drive"
-                                required />
+                            <input type="text" class="form-control" placeholder="Drive" v-model="product.drive" required />
                         </div>
                         <div class="control-item-register">
                             <div class="label-control">
@@ -77,6 +76,10 @@
                                 required />
                         </div>
                     </div>
+
+                    <div class="w-100 d-flex justify-content-center mt-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
                 </div>
                 <div class="col-md-12 col-lg-12 col-xl-4">
                     <div v-if="productId == 0">
@@ -88,11 +91,8 @@
                     </div>
                 </div>
             </div>
-            <div class="w-100 d-flex justify-content-center mt-4">
-                <button type="submit" class="btn btn-primary">Thêm Mới</button>
-            </div>
         </form>
-    </div>
+</div>
 </template>
 <script>
 export default {
@@ -180,7 +180,6 @@ export default {
                         body: JSON.stringify(productRequest)
                     }
                 ).then((res) => res.json())
-                alert(JSON.stringify(responseCreate))
                 if (responseCreate.code == 'error') {
                     this.notify = responseCreate.des
                     return
@@ -192,27 +191,32 @@ export default {
             }
             else {
                 try {
-                    var hotelRequest = {
-                        name: this.hotel.name,
-                        address: this.hotel.address,
-                        status: this.hotel.status,
-                        area: this.hotel.area,
-                        hotelType: this.hotel.hotelType,
-                        price: this.hotel.price,
+                    var productRequest = {
+                        name: this.product.name,
+                        image: '',
+                        price: this.product.price,
+                        category: this.product.category,
+                        productType: this.product.productType,
+                        description: this.product.description,
+                        cpu: this.product.cpu,
+                        ram: this.product.ram,
+                        drive: this.product.drive,
+                        vga: this.product.vga,
+                        monitor: this.product.monitor,
                     }
-                    var responseUpdate = {}
-                    await postDataWithToken(baseApi + '/api/HotelMangement/UpdateHotel?hotelId=' + this.hotelId.id, hotelRequest, token)
-                        .then(data => {
-                            responseUpdate = data
-                            console.log(responseUpdate)
-                        })
-                    if (responseUpdate.code == 'error') {
-                        this.notify = responseUpdate.des
-                        return
-                    }
+
+                    var responseCreate = await fetch('https://localhost:7029/api/Product/UpdateProduct?id='+this.productId,
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(productRequest)
+                        }
+                    ).then((res) => res.json())
                     alert('Update product successful!')
                     this.$router.push({
-                        name: 'hotel',
+                        name: 'adminProduct',
                     })
 
                 }

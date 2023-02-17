@@ -64,10 +64,16 @@
                 </div>
             </div>
         </div>
+
+        <div class="w-100 mt-5">
+            <ChartLine :chartData="numberOrder" class="chart-line" />
+        </div>
     </div>
 </template>
 <script>
+import ChartLine from './ChartLine.vue'
 export default {
+    components: { ChartLine },
     layout: "adminLayout",
     async beforeMount() {
         this.getProductList()
@@ -78,6 +84,7 @@ export default {
             totalOrder: 0,
             totalProduct: 0,
             totalProductSold: 0,
+            numberOrder: [10, 5, 8, 9, 2, 15, 13]
         };
     },
     methods: {
@@ -91,6 +98,7 @@ export default {
             this.totalOrder = response.totalOrder
             this.totalProduct = response.totalProduct
             this.totalProductSold= response.totalProductSold
+            this.numberOrder= response.numberOrderDetail
             console.log(JSON.stringify(response))
         },
     }
