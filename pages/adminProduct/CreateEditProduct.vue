@@ -75,6 +75,13 @@
                             <input type="text" class="form-control" placeholder="Mô tả" v-model="product.description"
                                 required />
                         </div>
+                        <div class="control-item-register">
+                            <div class="label-control">
+                                Thông số
+                            </div>
+                            <input type="text" class="form-control" placeholder="Thông số" v-model="product.details"
+                                required />
+                        </div>
                     </div>
 
                     <div class="w-100 d-flex justify-content-center mt-3">
@@ -92,7 +99,7 @@
                 </div>
             </div>
         </form>
-</div>
+    </div>
 </template>
 <script>
 export default {
@@ -151,6 +158,7 @@ export default {
                     drive: this.product.drive,
                     vga: this.product.vga,
                     monitor: this.product.monitor,
+                    details: this.product.details,
                 }
 
                 const formData = new FormData()
@@ -203,9 +211,10 @@ export default {
                         drive: this.product.drive,
                         vga: this.product.vga,
                         monitor: this.product.monitor,
+                        details: this.product.details,
                     }
 
-                    var responseCreate = await fetch('https://localhost:7029/api/Product/UpdateProduct?id='+this.productId,
+                    var responseCreate = await fetch('https://localhost:7029/api/Product/UpdateProduct?id=' + this.productId,
                         {
                             method: 'POST',
                             headers: {

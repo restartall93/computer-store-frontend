@@ -22,9 +22,9 @@
                         <th scope="col">Mã SP</th>
                         <th scope="col">Tên SP</th>
                         <th scope="col">Loại SP</th>
+                        <th scope="col">Danh Mục SP</th>
                         <th scope="col">Giá Tiền</th>
                         <th scope="col">Ảnh</th>
-                        <th scope="col">Mô tả</th>
                         <th scope="col">Hành động</th>
                     </tr>
                 </thead>
@@ -37,17 +37,20 @@
                             <div class="admin-product-name">{{ product.name }}</div>
                         </td>
                         <td>
-                            <div class="admin-producttype">{{ product.producttype }}</div>
+                            <div class="admin-producttype">{{ product.productType }}</div>
                         </td>
                         <td>
-                            <div class="admin-product-price">{{ product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND',}) }}</div>
+                            <div class="admin-producttype">{{ product.category }}</div>
+                        </td>
+                        <td>
+                            <div class="admin-product-price">{{ product.price.toLocaleString('vi-VN', {
+                                style: 'currency',
+                                currency: 'VND',
+                            }) }}</div>
                         </td>
                         <td>
                             <img class="img-product-detail" style="width: 60px"
                                 v-bind:src="'https://localhost:7029' + product.image" alt="">
-                        </td>
-                        <td>
-                            <div class="admin-product-content">{{ product.description }}</div>
                         </td>
                         <td>
                             <div class="w-100 d-flex">
@@ -55,7 +58,7 @@
                                     :to="{ path: 'adminProduct/CreateEditProduct', query: { 'productId': product.id } }">
                                     <font-awesome-icon icon="fa-solid fa-pen-to-square" />
                                 </NuxtLink>
-                                <div class="text-danger">
+                                <div @click="deleteProduct(product.id)" class="text-danger">
                                     <font-awesome-icon icon="fa-solid fa-trash-can" />
                                 </div>
                             </div>
@@ -95,6 +98,18 @@ export default {
             console.log(JSON.stringify(this.productList))
         },
 
+        async deleteProduct(id) {
+            if (confirm('Bạn có muốn xoá sản phẩm?')) {
+                var repsonseAddToCart = await fetch('https://localhost:7029/api/Product/DeleteProduct?id=' + id).then((res) => res.json())
+                if (repsonseAddToCart) {
+                    alert("xoá thành công")
+                    this.getProductList()
+                }
+            } else {
+                alert('Đã huỷ xoá sản phẩm!');
+            }
+        },
+
         chooesPage(index) {
             if (this.currentPage != 0) {
                 var element = document.getElementById("page-" + (this.currentPage - 1));
@@ -110,10 +125,9 @@ export default {
 </script>
 
 <style scoped>
-.admin-product-name{
-    
-}
-.add-product{
+.admin-product-name {}
+
+.add-product {
     background-color: #0f5b9a;
 }
 

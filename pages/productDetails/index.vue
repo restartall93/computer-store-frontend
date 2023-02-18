@@ -21,30 +21,25 @@
                         <div v-if="product.ram != 'none'" class="product-details-content">
                             <li>RAM: {{ product.ram }}</li>
                         </div>
-                        <div class="product-details-content">
+                        <div v-if="product.drive != 'none'" class="product-details-content">
                             <li>Ổ cứng: {{ product.drive }}</li>
                         </div>
-                        <div class="product-details-content">
+                        <div v-if="product.vga != 'none'" class="product-details-content">
                             <li>VGA: {{ product.vga }}</li>
                         </div>
-                        <div class="product-details-content">
+                        <div v-if="product.monitor != 'none'" class="product-details-content">
                             <li>Màn hình: {{ product.monitor }}</li>
                         </div>
-                        <!-- <div class="product-details-content">
-                            <li>Bàn phím: có đèn led</li>
+                        <div v-if="product.details != 'none'" class="product-details-content">
+                            <li v-for="(detail, index) in getDetailsList(product.details + ' ')">{{ detail }}</li>
                         </div>
-                        <div class="product-details-content">
-                            <li>HĐH: Win 11</li>
-                        </div>
-                        <div class="product-details-content">
-                            <li>Màu: Đen</li>
-                        </div> -->
+
                         <div class="status">
                             <div class="status-content">
                                 Tình trạng:
                             </div>
                             <div class="YESorNO">
-                                Liên hệ
+                                Còn Hàng
                             </div>
                             <div class="status-content-1">
                                 Bảo hành:
@@ -58,7 +53,7 @@
                                 Giá bán:
                             </div>
                             <div class="money-buy-product">
-                                {{ priceByFormat}} 
+                                {{ priceByFormat }}
                             </div>
                         </div>
                         <div class:="repost-product">
@@ -101,127 +96,12 @@
                 </div>
             </div>
         </div>
-        <div class="product-detail-read">
-            <div class="row">
-                <div class="col-md-12 col-lg-7 col-xl-7">
-                    <div class="test-1">
-                        <div class="title-detail-des">
-                            Đặc Điểm 
-                        </div>
-                        <!-- <div class="title">
-                            Giới thiệu Laptop Gigabyte Gaming G5 MD 51S1123SO ( i5-11400H/ 16GB/ 512GB SSD/ 15.6" FHD/
-                            RTX3050Ti 4Gb/ Win11)
-                        </div> -->
-                        <div class="des-content">
-                            {{ product.description }}
-                        </div>
-                    </div>
+        <div class="product-detail-read mt-3">
+            <div class="test-1">
+                <div class="title-detail-des h4" style="font-weight: bold;">
+                    Đặc Điểm
                 </div>
-                <!-- <div class="col-md-12 col-lg-5 col-xl-5">
-                    <div class="test-2">
-                        <div class="box-spec">
-                            <div class="title-box">
-                                THÔNG SỐ KỸ THUẬT
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    Hãng sản xuất
-                                </div>
-                                <div class="device-product-content-details">
-                                    Gigabyte
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    Chủng loại
-                                </div>
-                                <div class="device-product-content-details">
-                                    G5
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    Part Number
-                                </div>
-                                <div class="device-product-content-details">
-                                    MD-5 51S1123SO
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    Màu sắc
-                                </div>
-                                <div class="device-product-content-details">
-                                    Đen
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    CPU
-                                </div>
-                                <div class="device-product-content-details">
-                                    Intel i5 11400H (2.7Ghz, upto 4.5Ghz)
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    Chipset
-                                </div>
-                                <div class="device-product-content-details">
-                                    Intel HM570
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    RAM
-                                </div>
-                                <div class="device-product-content-details">
-                                    16GB DDR4 3200Mhz (8GB * 2)
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    Số khe cắm
-                                </div>
-                                <div class="device-product-content-details">
-                                    2
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    Dung lượng tối đa
-                                </div>
-                                <div class="device-product-content-details">
-                                    64GB
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    VGA
-                                </div>
-                                <div class="device-product-content-details">
-                                    NVIDIA GeForce RTX 3050Ti 4GB GDDR6
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    Ổ cứng
-                                </div>
-                                <div class="device-product-content-details">
-                                    512GB SSD
-                                </div>
-                            </div>
-                            <div class="content-spec">
-                                <div class="device-product-content">
-                                    Màn hình
-                                </div>
-                                <div class="device-product-content-details">
-                                    15.6 inch FHD 1920x1080 IPS, Anti-glare LCD (144Hz, 72% NTSC), 100% srgb
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+                <div class="h5" v-for="(des, index) in getDetailsList(product.description + ' ')">{{ des }}</div>
             </div>
         </div>
     </div>
@@ -249,6 +129,11 @@ export default {
             this.priceByFormat = this.product.price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND', })
         },
 
+        getDetailsList(details) {
+            //details='1950 MHz (Chế độ GAMING & SILENT) / 21 Gbps@24 GB GDDR6X@DisplayPort x 3 (v1.4a)@HDMI x 1 (2.1) (Hỗ trợ 4K 120Hz HDR, 8K 60Hz HDR và ​​Tốc độ làm mới có thể thay đổi như được chỉ định trong HDMI 2.1)'
+            return details.split("@")
+        },
+
         async addToCart() {
             var user = JSON.parse(localStorage.getItem('user'))
             if (user) {
@@ -257,19 +142,19 @@ export default {
                     userId: user.id
                 }
                 var repsonseAddToCart = await fetch('https://localhost:7029/api/ProductHandle/AddToCart',
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(addToCartRequest)
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(addToCartRequest)
+                    }
+                ).then((res) => res.json())
+                if (repsonseAddToCart.id != 0) {
+                    alert("Thêm thành công")
+                    this.$router.push("/cartPage")
                 }
-            ).then((res) => res.json())
-            if(repsonseAddToCart.id != 0){
-                alert("Thêm thành công")
-                this.$router.push("/cartPage")
-            }
-                
+
             }
             else {
                 alert('BẠN CẦN ĐĂNG NHẬP!')

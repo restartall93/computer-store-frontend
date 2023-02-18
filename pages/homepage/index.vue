@@ -5,33 +5,33 @@
                 <Menu></Menu>
             </div>
             <!-- <div class="main-app">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block w-100" src="../../assets/img/slide_1.jpg" alt="First slide">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="../../assets/img/slide_1.jpg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="../../assets/img/slide_3.jpg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="../../assets/img/slide_4.jpg" alt="Third slide">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="../../assets/img/slide_3.jpg" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="../../assets/img/slide_4.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div> -->
+                    </div> -->
             <div class="slide-container px-5 mt-2">
                 <img v-if="i == 1" class="w-100 h-100" src='../../assets/img/slide_1.jpg'>
                 <img v-if="i == 2" class="w-100 h-100" src='../../assets/img/slide_2.jpg'>
@@ -50,8 +50,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in laptopList">
                     <div class="card-item">
-                        <NuxtLink class="txt-details"
-                            :to="{ name: 'productDetails', query: { 'productId': product.id } }">
+                        <NuxtLink class="txt-details" :to="{ name: 'productDetails', query: { 'productId': product.id } }">
                             <img class="img-1" v-bind:src="'https://localhost:7029' + product.image" alt="">
                             <div class="img-content">
                                 {{ product.name }}
@@ -76,8 +75,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in computerList">
                     <div class="card-item">
-                        <NuxtLink class="txt-details"
-                            :to="{ name: 'productDetails', query: { 'productId': product.id } }">
+                        <NuxtLink class="txt-details" :to="{ name: 'productDetails', query: { 'productId': product.id } }">
                             <img class="img-1" v-bind:src="'https://localhost:7029' + product.image" alt="">
                             <div class="img-content">
                                 {{ product.name }}
@@ -101,8 +99,7 @@
             <div class="row">
                 <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in cpuList">
                     <div class="card-item">
-                        <NuxtLink class="txt-details"
-                            :to="{ name: 'productDetails', query: { 'productId': product.id } }">
+                        <NuxtLink class="txt-details" :to="{ name: 'productDetails', query: { 'productId': product.id } }">
                             <img class="img-1" v-bind:src="'https://localhost:7029' + product.image" alt="">
                             <div class="img-content">
                                 {{ product.name }}
@@ -125,24 +122,23 @@
                 vga - card màn hình
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-4 col-xl-3">
+                <div class="col-md-6 col-lg-4 col-xl-3" v-for="(product, index) in vgaList">
                     <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div class="card-item">
-
+                        <NuxtLink class="txt-details" :to="{ name: 'productDetails', query: { 'productId': product.id } }">
+                            <img class="img-1" v-bind:src="'https://localhost:7029' + product.image" alt="">
+                            <div class="img-content">
+                                {{ product.name }}
+                            </div>
+                        </NuxtLink>
+                        <div class="status-product-homepage">
+                            Liên hệ
+                        </div>
+                        <div class="prize-product">
+                            {{ product.price }}
+                            <div class="icon-cast-product">
+                                <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -227,6 +223,13 @@ export default {
                 return res.json()
             })
         this.cpuList = responseCPU
+
+        // get vga list
+        var responseVGA = await fetch('https://localhost:7029/api/Product/GetProductListByCategory?productType=VGA')
+            .then(res => {
+                return res.json()
+            })
+        this.vgaList = responseVGA
         var elementA = document.getElementById("button-slide-1");
         elementA.classList.add("button-slide-active");
         setInterval(this.myTimer, 3000)
@@ -237,6 +240,7 @@ export default {
             laptopList: [],
             computerList: [],
             cpuList: [],
+            vgaList: [],
             backgroundList: [],
             backgroundCurrent: '',
             i: 1,
